@@ -1,0 +1,20 @@
+{
+  "name": "givlocaldocs",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate-types": "wrangler types"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.0.1",
+    "@astrojs/starlight": "^0.41.1",
+    "astro": "^7.0.2",
+    "sharp": "^0.34.5",
+    "wrangler": "^4.105.0"
+  }
+}
