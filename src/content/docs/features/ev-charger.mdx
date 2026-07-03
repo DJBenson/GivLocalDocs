@@ -15,6 +15,19 @@ GivLocal supports the GivEnergy EV Charger via two connection methods. Once conn
 
 **Modbus TCP (direct)** — GivLocal connects directly to the charger on port 502 over your local network. The charger must be on the same network and reachable by IP.
 
+For Modbus to work, the charger must meet all of the following requirements:
+
+- A firmware version that supports local control, at least 1.12
+- Local control enabled in the GivEnergy portal
+- The device connected by WiFi
+
+To enable local control in the GivEnergy portal:
+
+1. Go to the GivEnergy portal (https://givenergy.cloud)
+2. Locate the EV charger
+3. Go to Settings -> Other and toggle "Local Control" to "on"
+4. Wait for the device to restart and start the server, which can take around 10 minutes
+
 **OCPP (via Home Assistant)** — GivLocal connects to Home Assistant which relays commands to the charger via OCPP. On first connection you'll be prompted for a **long-lived access token** from your Home Assistant profile page. Paste it in, or scan a QR code if your HA instance supports it. The token is saved alongside the device — you only need to enter it once.
 
 ## Status
