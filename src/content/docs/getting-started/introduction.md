@@ -9,7 +9,7 @@ Right off the bat I'm going to be clear, the app is free to download and runs in
 
 If you want to control your equipment then there is a small upgrade fee, currently £4.99 or equivalent in local currency. This unlocks everything apart from the Commissioning section which is reserved for installers and carries a much higher upgrade cost to match its commercial value and also to put off casual buyers.
 
-For more details, refer to the [Pro & Installer](/pro/) section.
+For more details, refer to the [Pro & Installer](/pro/) section. A copy of the [End User Licence Agreement](/eula/) is also available for review.
 
 ## How it works
 
