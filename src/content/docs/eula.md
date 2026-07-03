@@ -1,11 +1,9 @@
 ---
 title: End User Licence Agreement
-description: A model end user licence agreement for GivLocal.
+description: End user licence agreement for GivLocal.
 ---
 
-This page contains a model end user licence agreement for discussion and review. It is not legal advice and should be checked by a qualified solicitor before it is used in a live app store or commercial release.
-
-## Model EULA
+## End User Licence Agreement
 
 By downloading, installing, or using this application, you agree to the terms below.
 

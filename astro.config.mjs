@@ -61,12 +61,12 @@ export default defineConfig({
                     slug: 'supported-devices',
                 },
                 {
-                    label: 'End User Licence Agreement',
-                    slug: 'eula',
-                },
-                {
                     label: 'Pro & Installer',
                     slug: 'pro',
+                },
+                {
+                    label: 'End User Licence Agreement',
+                    slug: 'eula',
                 },
             ],
             customCss: ['./src/styles/custom.css'],
