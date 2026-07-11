@@ -65,8 +65,11 @@ export default defineConfig({
                     slug: 'pro',
                 },
                 {
-                    label: 'End User Licence Agreement',
-                    slug: 'eula',
+                    label: 'Legal',
+                    items: [
+                        { label: 'End User Licence Agreement', slug: 'eula' },
+                        { label: 'Privacy Policy', slug: 'privacy' },
+                    ],
                 },
             ],
             customCss: ['./src/styles/custom.css'],
