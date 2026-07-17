@@ -8,6 +8,7 @@ export default defineConfig({
         starlight({
             title: 'GivLocal',
             description: 'Local control for your GivEnergy system - no cloud required.',
+            favicon: '/favicon.png',
             logo: {
                 src: './src/assets/icon.png',
                 replacesTitle: false,
