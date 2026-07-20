@@ -11,7 +11,9 @@ GivLocal is available now on Google Play.
 
 ## iOS & iPadOS
 
-An App Store release is coming soon. GivLocal runs on iPhone and iPad.
+GivLocal is available now on iPhone and iPad.
+
+[**Download on the App Store**](https://apps.apple.com/app/givlocal/id6763407007)
 
 ## Requirements
 
