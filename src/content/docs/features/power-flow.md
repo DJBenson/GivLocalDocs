@@ -62,3 +62,7 @@ If you have an EV charger saved and associated with your inverter, a summary car
 ## Multiple devices
 
 If you have more than one device (e.g. a Gateway with multiple All-In-One units), use the tabs at the top of the screen to switch between them.
+
+## Customising what's shown
+
+The power flow diagram is one of several widgets you can add, remove, or reorder on the Dashboard. See [Customising the Dashboard](/features/customizing-dashboard/) for details.

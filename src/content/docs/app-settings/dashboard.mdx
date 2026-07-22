@@ -4,9 +4,14 @@ description: Customising the behaviour and display of the Dashboard.
 ---
 
 import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
 import dashboard from '../../../assets/screenshots/app-settings/dashboard.png';
 
 Open **Settings → Dashboard** to customise how the Dashboard looks and behaves.
+
+<Aside type="tip">
+  To choose which widgets appear on the Dashboard and the order they're shown in, long-press the Dashboard itself rather than using this settings screen. See [Customising the Dashboard](/features/customizing-dashboard/).
+</Aside>
 
 <a href={dashboard.src} target="_blank" rel="noopener">
   <Image src={dashboard} alt="Settings Dashboard section showing several of the toggle options" />
@@ -40,4 +45,7 @@ When enabled, a banner is displayed on the Dashboard whenever an inverter fault 
 
 ### Haptic Feedback
 Vibrates the device when a command is sent to the inverter or charger (e.g. Charge Now, Discharge Now). Can be disabled if you find the vibration distracting.
+
+### Reset Dashboard Layout
+Restores all inverter and EV charger widgets and their default portrait and landscape layouts. Use this to undo widget customisation done via long-press on the Dashboard - see [Customising the Dashboard](/features/customizing-dashboard/).
 

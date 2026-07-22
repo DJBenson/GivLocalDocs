@@ -1,0 +1,85 @@
+---
+title: Customising the Dashboard
+description: Choosing which widgets appear on your Dashboard and the order they're shown in.
+---
+
+import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
+import availableWidgets from '../../../assets/screenshots/customizing-dashboard/available-widgets.png';
+import widgetControls from '../../../assets/screenshots/customizing-dashboard/widget-controls.png';
+import emptyState from '../../../assets/screenshots/customizing-dashboard/empty-state.png';
+import customizedExample from '../../../assets/screenshots/customizing-dashboard/customized-example.png';
+
+The Dashboard is built from individual widgets that you can add, remove, and reorder to suit what you care about most.
+
+## Entering edit mode
+
+Long-press anywhere on the Dashboard to enter edit mode. A panel appears at the top showing **Available widgets** - a palette of everything not currently on your Dashboard - along with **Clear**, **Reset**, and **Done** actions.
+
+<a href={availableWidgets.src} target="_blank" rel="noopener">
+  <Image src={availableWidgets} alt="Editing Portrait Layout panel showing the Available widgets palette and Clear, Reset, Done actions" />
+</a>
+
+Tap the **+** on any widget chip to add it to your Dashboard.
+
+<Aside type="note">
+  Portrait and landscape use separate layouts. Customising one doesn't affect the other, and the panel title reflects whichever orientation you're currently editing.
+</Aside>
+
+## Available widgets
+
+| Widget | Description |
+|--------|-------------|
+| Power Flow | The full animated power flow diagram |
+| Power Flow Tile | A compact tile version of the power flow diagram |
+| Quick Actions | Charge Now / Discharge Now / Pause buttons |
+| Battery Swipe | Swipeable battery summary card |
+| Battery Plant | Combined battery plant summary |
+| Inverter Batteries | Per-inverter battery breakdown |
+| Chargers | EV charger status tiles |
+| GivTCP-style card | Battery card in the style used by GivTCP, showing capacity, charge/discharge totals, and timing estimates |
+| Energy Stats | Daily generation, import, export, and consumption totals |
+| Connection | Connection status summary |
+
+If you have more than one battery, an individual widget is also offered for each one (e.g. **Battery 1**, **Battery 2**).
+
+## Removing and reordering
+
+While editing, each widget already on your Dashboard shows two controls:
+
+- A red **−** in the top-left corner - removes that widget
+- A blue drag handle in the top-right corner - press and drag to move the widget to a new position
+
+<a href={widgetControls.src} target="_blank" rel="noopener">
+  <Image src={widgetControls} alt="A Dashboard widget in edit mode showing the remove button and drag handle" />
+</a>
+
+## Clear, Reset, and Done
+
+| Action | Effect |
+|--------|--------|
+| Clear | Removes every widget from the layout you're currently editing |
+| Reset | Restores the default widget set for the layout you're currently editing |
+| Done | Exits edit mode |
+
+If you clear everything, the Dashboard shows an empty state with a shortcut back into edit mode:
+
+<a href={emptyState.src} target="_blank" rel="noopener">
+  <Image src={emptyState} alt="Empty Dashboard state showing a plus button and instructions to add widgets" />
+</a>
+
+<Aside type="tip">
+  To restore every default widget across **both** portrait and landscape layouts in one go, use **Settings → Dashboard → Reset Dashboard Layout** instead of the in-editor Reset, which only affects the layout you're currently editing.
+</Aside>
+
+## Example
+
+A Dashboard customised to show only the GivTCP-style battery card and Quick Actions, with the Power Flow widget removed:
+
+<a href={customizedExample.src} target="_blank" rel="noopener">
+  <Image src={customizedExample} alt="Customised Dashboard showing the GivTCP-style battery card and Quick Actions buttons, with no Power Flow widget" />
+</a>
+
+<Aside type="note">
+  The EV Charger screen has its own independent set of widgets and the same long-press edit mode, separate from the Dashboard.
+</Aside>

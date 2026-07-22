@@ -3,11 +3,15 @@ title: Battery Diagnostics
 description: Settings for calculated battery health data.
 ---
 
+import { Image } from 'astro:assets';
+import batteryDiagnostics from '../../../assets/screenshots/app-settings/battery-diagnostics.png';
+
 Open **Settings → Battery Diagnostics** to control display of calculated battery health data.
+
+<a href={batteryDiagnostics.src} target="_blank" rel="noopener">
+  <Image src={batteryDiagnostics} alt="Settings Battery Diagnostics section showing the Show Calculated State of Health toggle" />
+</a>
 
 ## Show Calculated State of Health
 
 Displays a calculated battery health percentage on the battery cell detail sheet, when BMS capacity data is available from the inverter. See [Battery Cell Details](/features/battery-cell-details/) for more.
-
-## Screenshots needed
-- Settings > Battery Diagnostics screen showing the toggle

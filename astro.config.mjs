@@ -30,6 +30,7 @@ export default defineConfig({
                     label: 'Features',
                     items: [
                         { label: 'Live Power Flow', slug: 'features/power-flow' },
+                        { label: 'Customising the Dashboard', slug: 'features/customizing-dashboard' },
                         { label: 'Energy Stats', slug: 'features/energy-stats' },
                         { label: 'Battery Management', slug: 'features/battery-management' },
                         { label: 'Battery Cell Details', slug: 'features/battery-cell-details' },

@@ -3,7 +3,14 @@ title: Quick Actions
 description: Power settings for Charge Now and Discharge Now.
 ---
 
+import { Image } from 'astro:assets';
+import quickActions from '../../../assets/screenshots/app-settings/quick-actions.png';
+
 Open **Settings → Quick Actions** to control the power behaviour of the Dashboard's Charge Now and Discharge Now buttons.
+
+<a href={quickActions.src} target="_blank" rel="noopener">
+  <Image src={quickActions} alt="Settings Quick Actions section showing Use Max Power for Quick Charge and Quick Discharge toggles" />
+</a>
 
 ## Options
 
@@ -15,6 +22,3 @@ Open **Settings → Quick Actions** to control the power behaviour of the Dashbo
 When enabled, quick actions use the maximum hardware-supported power rate rather than your configured power limit. The limit is restored when the quick action ends.
 
 This section only appears for inverters that support quick actions.
-
-## Screenshots needed
-- Settings > Quick Actions screen showing both toggles

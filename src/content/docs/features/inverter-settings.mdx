@@ -8,6 +8,12 @@ import { Aside } from '@astrojs/starlight/components';
 import overview from '../../../assets/screenshots/inverter-settings/overview.png';
 import writeLog from '../../../assets/screenshots/inverter-settings/write-log.png';
 import liveTelemetry from '../../../assets/screenshots/inverter-settings/live-telemetry.png';
+import batteryControl from '../../../assets/screenshots/inverter-settings/battery-control.png';
+import powerLimits from '../../../assets/screenshots/inverter-settings/power-limits.png';
+import advanced from '../../../assets/screenshots/inverter-settings/advanced.png';
+import service from '../../../assets/screenshots/inverter-settings/service.png';
+import commissioning from '../../../assets/screenshots/inverter-settings/commissioning.png';
+import emsControls from '../../../assets/screenshots/inverter-settings/ems-controls.png';
 
 The Inverter screen provides access to device information, diagnostics, and all configurable settings for your inverter or gateway. Sections are collapsible - tap a section header to expand it.
 
@@ -61,6 +67,10 @@ Displays raw register values from the inverter in real time, grouped into catego
 | Pause Start / End | Time window during which the battery is held |
 | Pause Mode | Not Paused, Pause Charge, Pause Discharge, or Pause Charge & Discharge |
 
+<a href={batteryControl.src} target="_blank" rel="noopener">
+  <Image src={batteryControl} alt="Battery Control section showing Eco Mode, Pause Start/End, Pause Mode, and Battery Reserve" />
+</a>
+
 ## Power Limits
 
 | Setting | Description |
@@ -70,6 +80,10 @@ Displays raw register values from the inverter in real time, grouped into catego
 | Discharge Power Limit | Maximum battery discharge rate in watts. |
 
 The maximum values available on these sliders reflect your inverter's hardware specifications and battery configuration.
+
+<a href={powerLimits.src} target="_blank" rel="noopener">
+  <Image src={powerLimits} alt="Power Limits section showing Active Power Rate, AC Charge Limit, and AC Discharge Limit" />
+</a>
 
 <Aside type="tip">
   If **Use Max Power for Quick Charge/Discharge** is enabled in App Settings, these limits are temporarily overridden when you tap Charge Now or Discharge Now.
@@ -84,6 +98,10 @@ Available on EMS devices only.
 | Export Power Limit | Maximum power the plant is allowed to export to the grid, in watts |
 | Plant Charge Compensation | Fine-tune the charge target by a small offset (±5 W) to account for measurement differences between the EMS and individual inverters |
 | Plant Discharge Compensation | Fine-tune the discharge target by a small offset (±5 W) |
+
+<a href={emsControls.src} target="_blank" rel="noopener">
+  <Image src={emsControls} alt="EMS Controls section showing Export Power Limit, Plant Charge Compensation, and Plant Discharge Compensation" />
+</a>
 
 ## Clock
 
@@ -104,6 +122,10 @@ Displays your phone's current time alongside the inverter's internal clock. Tap 
 **Battery SOC Calibration** - if your battery state of charge reading has drifted, you can run a calibration cycle here. Choose **Full** (charge to 100% then discharge) or **Charge Only** (charge to 100%), then tap **Start**. Tap **Stop** when complete. This is a slow process that can take many hours.
 
 **Real-Time Control (RTC)** - enables or disables real-time control mode. Only available on supported devices and firmware versions.
+
+<a href={advanced.src} target="_blank" rel="noopener">
+  <Image src={advanced} alt="Advanced section showing RTC Enable, Battery SOC Calibration, Start Calibration, and Export Power Priority" />
+</a>
 
 <Aside type="caution">
   Only change RTC mode if you understand its implications.
@@ -161,6 +183,10 @@ Power limits are reset differently by type:
   Restarting hardware interrupts monitoring and may briefly affect loads the inverter is powering.
 </Aside>
 
+<a href={service.src} target="_blank" rel="noopener">
+  <Image src={service} alt="Service section showing Restore Defaults, Restart Inverter, and Restart Hardware" />
+</a>
+
 ## Commissioning *(Installer tier)*
 
 This section requires the [Installer tier](/pro/) and covers settings typically configured once during installation. A confirmation prompt appears before any write is sent. This can be disabled in **Settings → Diagnostics → Confirm Commissioning Writes**.
@@ -179,6 +205,10 @@ This section requires the [Installer tier](/pro/) and covers settings typically 
 | CT Direction | Flip the CT clamp reading if it's showing negative when it should be positive |
 | Force Off Grid | Isolates the inverter from the grid - use with care |
 
+<a href={commissioning.src} target="_blank" rel="noopener">
+  <Image src={commissioning} alt="Commissioning section showing the locked Advanced/installer features banner and register settings list" />
+</a>
+
 ## Diagnostics
 
 Tools for troubleshooting. None of these change inverter settings.
@@ -190,11 +220,3 @@ Tools for troubleshooting. None of these change inverter settings.
 **Plant Dump** - like Register Dump, but covers all inverters in a multi-inverter plant.
 
 **Register Sweep** - scans all registers and lists only those with non-zero values. A quicker way to find active or changed registers without wading through the full dump.
-
-## Screenshots needed
-- Battery Control section expanded (requires GivLocal Pro)
-- Power Limits section expanded (requires GivLocal Pro)
-- Advanced section (Export Power Priority, Battery SOC Calibration) (requires GivLocal Pro)
-- EMS Controls section (EMS device only, requires GivLocal Pro)
-- Service section (Restore Defaults + restart options) (requires GivLocal Pro)
-- Commissioning section (requires GivLocal Installer)

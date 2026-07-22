@@ -7,24 +7,31 @@
 - [x] Battery cell detail sheet - HV battery (BMU/BCU pack view)
 
 ### Fault Log (`features/fault-log`)
-- [ ] Fault Log screen showing active faults; no connected test device currently has a fault to capture
-- [ ] Dashboard with fault alert banner visible; same blocker as above
+- [x] Fault Log screen showing active faults
+- [x] Dashboard with fault alert banner visible
 
 ### EV Charger (`features/ev-charger`)
-- [ ] EV Charger status card on Dashboard; the only EV charger in the test rig is behind a Home Assistant/OCPP integration requiring an access token
-- [ ] EV Charger controls card (current limit slider, Plug & Go, etc.) (requires GivLocal Pro + the above)
-- [ ] EV Charger schedule card (requires GivLocal Pro + the above)
+- [x] EV Charger status card on Dashboard (shown as an orb in the power flow diagram, with status and last 4 digits of serial)
+- [x] EV Charger controls card (Start/Stop/Ready, Plug & Go, Unlock Connector)
+- [x] EV Charger schedule card
+- [x] EV Charger Advanced Controls section expanded (Charge Mode, Current Limit, Front Panel LEDs, DNO Fuse Size, Randomised Delay, Suspended Timeout)
+
+### Customising the Dashboard (`features/customizing-dashboard`) - new page
+- [x] Editing Portrait Layout panel showing Available widgets, Clear/Reset/Done
+- [x] Widget edit controls (remove button + drag handle)
+- [x] Empty Dashboard state after Clear
+- [x] Example of a customised Dashboard (GivTCP-style card + Quick Actions, no Power Flow)
 
 ### Inverter Settings (`features/inverter-settings`)
 - [x] Inverter overview section
 - [x] Write Log screen
 - [x] Live Telemetry screen
-- [ ] Battery Control section expanded (requires GivLocal Pro)
-- [ ] Power Limits section expanded (requires GivLocal Pro)
-- [ ] Advanced section (Export Power Priority, Battery SOC Calibration) (requires GivLocal Pro)
-- [ ] EMS Controls section (EMS device only, requires GivLocal Pro)
-- [ ] Service section showing restart options (requires GivLocal Pro)
-- [ ] Commissioning section (requires GivLocal Installer)
+- [x] Battery Control section expanded
+- [x] Power Limits section expanded
+- [x] Advanced section (Export Power Priority, Battery SOC Calibration)
+- [x] EMS Controls section (EMS device only, requires GivLocal Pro)
+- [x] Service section showing restart options
+- [x] Commissioning section
   - Note: the Restore Defaults power-limit table was corrected - Gateway resets to 100%/100%, but AC-Coupled actually resets to 50%/50% (it has a real DC battery circuit, unlike Gateway). No screenshot impact, content-only fix.
 
 ## App Settings
@@ -34,6 +41,7 @@
 
 ### Dashboard Settings (`app-settings/dashboard`)
 - [x] Settings > Dashboard showing toggle options
+  - Note: added a Reset Dashboard Layout entry (restores all widgets + default portrait/landscape layouts) and a cross-link to the new Customising the Dashboard feature page - this setting existed in the app but wasn't documented before.
 
 ### Connection & Polling (`app-settings/connection`)
 - [x] Settings > Connection screen showing refresh intervals
@@ -41,10 +49,10 @@
 - [ ] Adaptive connection details screen (Status, Inverter, Observations, and the reset action) - new content added for the previously-undocumented Adaptive Inverter Connection toggle
 
 ### Quick Actions (`app-settings/quick-actions`) - new page
-- [ ] Settings > Quick Actions screen showing both "Use Max Power" toggles
+- [x] Settings > Quick Actions screen showing both "Use Max Power" toggles
 
 ### Battery Diagnostics (`app-settings/battery-diagnostics`) - new page
-- [ ] Settings > Battery Diagnostics screen showing the Show Calculated State of Health toggle
+- [x] Settings > Battery Diagnostics screen showing the Show Calculated State of Health toggle
 
 ### Diagnostics & Advanced (`app-settings/diagnostics`)
 - [x] Settings > Diagnostics screen
