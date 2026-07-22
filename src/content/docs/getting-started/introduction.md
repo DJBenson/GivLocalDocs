@@ -13,7 +13,7 @@ For more details, refer to the [Pro & Installer](/pro/) section. A copy of the [
 
 ## How it works
 
-GivLocal communicates directly with your GivEnergy hardware over your home network. GivEnergy devices expose a Modbus-based interface on port 8899 (inverters and gateways) or port 502 (EV Charger), which GivLocal uses to read live data and write settings. Your phone talks directly to the hardware over Wi-Fi — no intermediary, no cloud.
+GivLocal communicates directly with your GivEnergy hardware over your home network. GivEnergy devices expose a Modbus-based interface on port 8899 (inverters and gateways) or port 502 (EV Charger), which GivLocal uses to read live data and write settings. Your phone talks directly to the hardware over Wi-Fi - no intermediary, no cloud.
 
 ## What you can do
 

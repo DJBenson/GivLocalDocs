@@ -19,9 +19,9 @@ Animated arrows on the flow lines indicate direction. When **Power-based Speed**
 
 ## Interactive elements
 
-**Battery orb** — tapping the battery circle on the flow diagram opens a quick-control panel where you can adjust Charge and Discharge Power Limits without leaving the dashboard. Only available on inverters that support power limits.
+**Battery orb** - tapping the battery circle on the flow diagram opens a quick-control panel where you can adjust Charge and Discharge Power Limits without leaving the dashboard. Only available on inverters that support power limits.
 
-**EV Charger orb** — if a linked EV charger appears in the flow diagram, tapping its circle switches directly to the charger dashboard. The four digits shown inside the orb are the last four digits of the charger's serial number, making it easy to identify which charger is which when you have more than one.
+**EV Charger orb** - if a linked EV charger appears in the flow diagram, tapping its circle switches directly to the charger dashboard. The four digits shown inside the orb are the last four digits of the charger's serial number, making it easy to identify which charger is which when you have more than one.
 
 ## Today's totals
 
@@ -50,9 +50,9 @@ A thin bar just below the app title shows when data was last refreshed, colour-c
 
 Four buttons give one-tap battery control:
 
-- **Charge Now** — forces the battery to charge at maximum rate until the reserve is reached
-- **Discharge Now** — forces the battery to discharge until the reserve floor
-- **Pause** — holds the battery at its current state of charge
+- **Charge Now** - forces the battery to charge at maximum rate until the reserve is reached
+- **Discharge Now** - forces the battery to discharge until the reserve floor
+- **Pause** - holds the battery at its current state of charge
 - A fourth button appears when a quick action is active, returning the inverter to normal operation
 
 ## Linked EV Charger

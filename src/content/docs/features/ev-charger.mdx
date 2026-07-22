@@ -13,7 +13,7 @@ GivLocal supports the GivEnergy EV Charger via two connection methods. Once conn
 
 ## Connection methods
 
-**Modbus TCP (direct)** — GivLocal connects directly to the charger on port 502 over your local network. The charger must be on the same network and reachable by IP.
+**Modbus TCP (direct)** - GivLocal connects directly to the charger on port 502 over your local network. The charger must be on the same network and reachable by IP.
 
 For Modbus to work, the charger must meet all of the following requirements:
 
@@ -28,7 +28,7 @@ To enable local control in the GivEnergy portal:
 3. Go to Settings -> Other and toggle "Local Control" to "on"
 4. Wait for the device to restart and start the server, which can take around 10 minutes
 
-**OCPP (via Home Assistant)** — GivLocal connects to Home Assistant which relays commands to the charger via OCPP. On first connection you'll be prompted for a **long-lived access token** from your Home Assistant profile page. Paste it in, or scan a QR code if your HA instance supports it. The token is saved alongside the device — you only need to enter it once.
+**OCPP (via Home Assistant)** - GivLocal connects to Home Assistant which relays commands to the charger via OCPP. On first connection you'll be prompted for a **long-lived access token** from your Home Assistant profile page. Paste it in, or scan a QR code if your HA instance supports it. The token is saved alongside the device - you only need to enter it once.
 
 ## Status
 
@@ -71,13 +71,13 @@ Expand the Advanced section for less frequently changed settings:
 | Charge Mode | SuperEco, Eco, Boost, or Modbus Slave |
 | Current Limit | Maximum charging current in amps |
 | Front Panel LEDs | Toggle the charger's status lights on or off |
-| DNO Fuse Size | Incoming supply fuse rating (40–100 A) — keeps the charger within your supply capacity |
+| DNO Fuse Size | Incoming supply fuse rating (40–100 A) - keeps the charger within your supply capacity |
 | Randomised Delay | Delay applied at session start for load spreading (600–1800 s, in 60 s steps) |
 | Suspended Timeout | How long the charger waits in a suspended state before giving up (0–700 s) |
 
 ## EV Charger schedule *(OCPP only)*
 
-The EV Charger has its own schedule, separate from the inverter charge/discharge schedules. Enable the schedule, choose which days it applies, set start and end times, and choose a current limit for that window. The schedule runs on the charger itself — your phone doesn't need to be present.
+The EV Charger has its own schedule, separate from the inverter charge/discharge schedules. Enable the schedule, choose which days it applies, set start and end times, and choose a current limit for that window. The schedule runs on the charger itself - your phone doesn't need to be present.
 
 <Aside type="tip">
   If you use Octopus Intelligent or another smart tariff with built-in EV scheduling, you may not need to configure EV charger schedules manually.

@@ -9,7 +9,7 @@ import overview from '../../../assets/screenshots/inverter-settings/overview.png
 import writeLog from '../../../assets/screenshots/inverter-settings/write-log.png';
 import liveTelemetry from '../../../assets/screenshots/inverter-settings/live-telemetry.png';
 
-The Inverter screen provides access to device information, diagnostics, and all configurable settings for your inverter or gateway. Sections are collapsible — tap a section header to expand it.
+The Inverter screen provides access to device information, diagnostics, and all configurable settings for your inverter or gateway. Sections are collapsible - tap a section header to expand it.
 
 ## Overview
 
@@ -43,10 +43,10 @@ Useful for verifying that changes were applied, or for diagnosing unexpected beh
 
 Displays raw register values from the inverter in real time, grouped into categories:
 
-- **PV** — solar input voltages and currents
-- **Grid** — grid voltage, frequency, and power
-- **EPS** — emergency power supply readings
-- **Temperature** — inverter and battery temperature sensors
+- **PV** - solar input voltages and currents
+- **Grid** - grid voltage, frequency, and power
+- **EPS** - emergency power supply readings
+- **Temperature** - inverter and battery temperature sensors
 
 <a href={liveTelemetry.src} target="_blank" rel="noopener">
   <Image src={liveTelemetry} alt="Live Telemetry section showing PV string voltages, currents, and power" />
@@ -89,21 +89,21 @@ Available on EMS devices only.
 
 Displays your phone's current time alongside the inverter's internal clock. Tap **Sync** to write your phone's time to the inverter. Keeping the inverter clock accurate matters for schedule execution.
 
-**Automatic skew detection** — when the app connects, it compares the inverter clock against the phone time. If the difference exceeds two minutes, a prompt appears asking whether to sync. The prompt appears at most once per day.
+**Automatic skew detection** - when the app connects, it compares the inverter clock against the phone time. If the difference exceeds two minutes, a prompt appears asking whether to sync. The prompt appears at most once per day.
 
 ## Advanced
 
-**Export Power Priority** — controls what the inverter prioritises when generating excess power:
+**Export Power Priority** - controls what the inverter prioritises when generating excess power:
 
 | Value | Behaviour |
 |-------|-----------|
-| 0 — PV First | Solar goes to loads before anything else |
-| 1 — Load First | Loads are satisfied first, then battery, then export |
-| 2 — Battery First | Battery is charged before exporting |
+| 0 - PV First | Solar goes to loads before anything else |
+| 1 - Load First | Loads are satisfied first, then battery, then export |
+| 2 - Battery First | Battery is charged before exporting |
 
-**Battery SOC Calibration** — if your battery state of charge reading has drifted, you can run a calibration cycle here. Choose **Full** (charge to 100% then discharge) or **Charge Only** (charge to 100%), then tap **Start**. Tap **Stop** when complete. This is a slow process that can take many hours.
+**Battery SOC Calibration** - if your battery state of charge reading has drifted, you can run a calibration cycle here. Choose **Full** (charge to 100% then discharge) or **Charge Only** (charge to 100%), then tap **Start**. Tap **Stop** when complete. This is a slow process that can take many hours.
 
-**Real-Time Control (RTC)** — enables or disables real-time control mode. Only available on supported devices and firmware versions.
+**Real-Time Control (RTC)** - enables or disables real-time control mode. Only available on supported devices and firmware versions.
 
 <Aside type="caution">
   Only change RTC mode if you understand its implications.
@@ -122,7 +122,7 @@ Displays your phone's current time alongside the inverter's internal clock. Tap 
 
 ## Service
 
-**Restore Defaults** — writes a fixed set of values directly to the inverter's holding registers, returning operational settings to a known baseline. Useful after testing or after a quick action has left the inverter in a non-standard state.
+**Restore Defaults** - writes a fixed set of values directly to the inverter's holding registers, returning operational settings to a known baseline. Useful after testing or after a quick action has left the inverter in a non-standard state.
 
 Values written on restore:
 
@@ -148,14 +148,14 @@ Power limits are reset differently by type:
 </Aside>
 
 <Aside type="note">
-  Restore Defaults clears the schedule **enable flags** but does not touch slot times or target SOC values stored in the Schedules tab. Your configured charge and discharge windows remain on the inverter — they are just disabled. Re-enable them from the Schedules tab when you are ready.
+  Restore Defaults clears the schedule **enable flags** but does not touch slot times or target SOC values stored in the Schedules tab. Your configured charge and discharge windows remain on the inverter - they are just disabled. Re-enable them from the Schedules tab when you are ready.
 </Aside>
 
-**Corrupt slot detection** — after applying defaults, the app reads back all slots. If any contain an invalid time value (a known firmware quirk where minutes is set to 60), the app automatically clears those slots and logs the action.
+**Corrupt slot detection** - after applying defaults, the app reads back all slots. If any contain an invalid time value (a known firmware quirk where minutes is set to 60), the app automatically clears those slots and logs the action.
 
-**Restart Inverter** — sends a software restart command. The inverter will briefly go offline.
+**Restart Inverter** - sends a software restart command. The inverter will briefly go offline.
 
-**Restart Hardware** *(Gateway systems only)* — separate options to restart the Gateway, connected AIOs individually, or everything at once.
+**Restart Hardware** *(Gateway systems only)* - separate options to restart the Gateway, connected AIOs individually, or everything at once.
 
 <Aside type="caution">
   Restarting hardware interrupts monitoring and may briefly affect loads the inverter is powering.
@@ -177,19 +177,19 @@ This section requires the [Installer tier](/pro/) and covers settings typically 
 | Grid Import Current Limit | Maximum import current in amps |
 | PV Input Mode | Independent Strings (separate MPPT per string) or Combined |
 | CT Direction | Flip the CT clamp reading if it's showing negative when it should be positive |
-| Force Off Grid | Isolates the inverter from the grid — use with care |
+| Force Off Grid | Isolates the inverter from the grid - use with care |
 
 ## Diagnostics
 
 Tools for troubleshooting. None of these change inverter settings.
 
-**Register Reader** — read a specific register by address and slave ID. Choose Input Register (IR) or Holding Register (HR), enter the address, and tap Read. The raw value is shown immediately.
+**Register Reader** - read a specific register by address and slave ID. Choose Input Register (IR) or Holding Register (HR), enter the address, and tap Read. The raw value is shown immediately.
 
-**Register Dump** — reads every register on the inverter and saves the result to a file. Useful when reporting a problem or comparing states before and after a change.
+**Register Dump** - reads every register on the inverter and saves the result to a file. Useful when reporting a problem or comparing states before and after a change.
 
-**Plant Dump** — like Register Dump, but covers all inverters in a multi-inverter plant.
+**Plant Dump** - like Register Dump, but covers all inverters in a multi-inverter plant.
 
-**Register Sweep** — scans all registers and lists only those with non-zero values. A quicker way to find active or changed registers without wading through the full dump.
+**Register Sweep** - scans all registers and lists only those with non-zero values. A quicker way to find active or changed registers without wading through the full dump.
 
 ## Screenshots needed
 - Battery Control section expanded (requires GivLocal Pro)

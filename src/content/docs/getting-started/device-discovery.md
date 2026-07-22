@@ -17,11 +17,11 @@ GivLocal scans your local network for GivEnergy hardware automatically when you 
 
 Tap the scan icon in the top right of the discovery screen. GivLocal scans every address on your current subnet (e.g. `192.168.1.1–254`) for GivEnergy devices. A progress bar shows how far through the scan you are.
 
-On a typical home network the scan completes in under a minute. When your inverter is found it appears in the list immediately — you don't need to wait for the scan to finish before connecting.
+On a typical home network the scan completes in under a minute. When your inverter is found it appears in the list immediately - you don't need to wait for the scan to finish before connecting.
 
 ## Scanning a different subnet
 
-If your inverter is on a different subnet to your phone (common with mesh systems or VLANs), tap **Scan Different Subnet** in the scan options menu and enter the first three octets of the target range — for example, `192.168.100`. The app will then scan `.1` through `.254` on that range.
+If your inverter is on a different subnet to your phone (common with mesh systems or VLANs), tap **Scan Different Subnet** in the scan options menu and enter the first three octets of the target range - for example, `192.168.100`. The app will then scan `.1` through `.254` on that range.
 
 ## Manual entry
 
@@ -31,9 +31,9 @@ If you already know your inverter's IP address, tap **Manual Connection**, enter
 
 Each entry shows the product name, IP address, firmware version, serial number, and when the device was last seen.
 
-- **Rename** — long-press a device and tap **Edit** to give it a custom name or update its IP. You can also set a remote address here (e.g. `myinverter.example.com:18899`) for port forwarding setups
-- **Favourite** — long-press and choose **Set as Favourite**, or swipe right. The starred device connects automatically on launch. Requires **GivLocal Pro**
-- **Delete** — swipe left and tap **Delete**, or use the long-press menu
+- **Rename** - long-press a device and tap **Edit** to give it a custom name or update its IP. You can also set a remote address here (e.g. `myinverter.example.com:18899`) for port forwarding setups
+- **Favourite** - long-press and choose **Set as Favourite**, or swipe right. The starred device connects automatically on launch. Requires **GivLocal Pro**
+- **Delete** - swipe left and tap **Delete**, or use the long-press menu
 
 ## Connection errors
 

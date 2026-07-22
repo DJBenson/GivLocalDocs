@@ -9,7 +9,7 @@ import { Steps, Aside } from '@astrojs/starlight/components';
   Tailscale remote access requires **GivLocal Pro**.
 </Aside>
 
-[Tailscale](https://tailscale.com) creates an encrypted mesh VPN between your devices. Once set up, your phone can reach your inverter from anywhere as if it were on your home network — with no open ports on your router.
+[Tailscale](https://tailscale.com) creates an encrypted mesh VPN between your devices. Once set up, your phone can reach your inverter from anywhere as if it were on your home network - with no open ports on your router.
 
 ## Setup
 
@@ -17,7 +17,7 @@ import { Steps, Aside } from '@astrojs/starlight/components';
 
 1. **Create a free Tailscale account** at [tailscale.com](https://tailscale.com).
 
-2. **Install Tailscale on an always-on device at home** — a Raspberry Pi, NAS, Home Assistant instance, or any always-on computer. This device must be on the same network as your inverter.
+2. **Install Tailscale on an always-on device at home** - a Raspberry Pi, NAS, Home Assistant instance, or any always-on computer. This device must be on the same network as your inverter.
 
 3. **Enable subnet routing** on that device so it advertises your home subnet (e.g. `192.168.1.0/24`) to your Tailscale network. See the [Tailscale subnet routing guide](https://tailscale.com/kb/1019/subnets).
 
@@ -25,7 +25,7 @@ import { Steps, Aside } from '@astrojs/starlight/components';
 
 5. **In GivLocal**, go to **Settings → Remote Access** and enable **Use Tailscale**. Either log in to your existing Tailscale account or paste an auth key. Once connected, your device's Tailscale IP (a `100.x.x.x` address) is shown in the settings.
 
-6. **Connect to your inverter** using its local IP address — Tailscale routes the traffic through the subnet router at home when you're away.
+6. **Connect to your inverter** using its local IP address - Tailscale routes the traffic through the subnet router at home when you're away.
 
 </Steps>
 
@@ -35,9 +35,9 @@ import { Steps, Aside } from '@astrojs/starlight/components';
 
 ## Automatic switching
 
-GivLocal can switch automatically between your local network and Tailscale based on which Wi-Fi you're connected to — no manual switching needed. See [Automatic Wi-Fi Switching](/remote-access/automatic-switching/) for setup instructions.
+GivLocal can switch automatically between your local network and Tailscale based on which Wi-Fi you're connected to - no manual switching needed. See [Automatic Wi-Fi Switching](/remote-access/automatic-switching/) for setup instructions.
 
 ## Tips
 
-- The free Tailscale plan supports up to 3 users and 100 devices — more than enough for personal use.
+- The free Tailscale plan supports up to 3 users and 100 devices - more than enough for personal use.
 - You can also install Tailscale directly on a device running GivTCP or Home Assistant and use that as the exit node.
