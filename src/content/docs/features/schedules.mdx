@@ -3,13 +3,20 @@ title: Schedules
 description: Setting up charge and discharge time slots.
 ---
 
+import { Image } from 'astro:assets';
 import { Aside } from '@astrojs/starlight/components';
+import scheduleControls from '../../../assets/screenshots/schedules/schedule-controls.png';
+import newChargeSlot from '../../../assets/screenshots/schedules/new-charge-slot.png';
 
 <Aside>
   Schedules require **GivLocal Pro**.
 </Aside>
 
 The Schedules tab lets you set time windows for automatic charging and discharging. Schedules are written directly to the inverter and run independently of the app - your phone doesn't need to be nearby for them to work.
+
+<a href={scheduleControls.src} target="_blank" rel="noopener">
+  <Image src={scheduleControls} alt="Schedules tab showing Schedule Controls toggles and the Charge Slots and Discharge Slots lists" />
+</a>
 
 ## Slot limits by device
 
@@ -59,6 +66,10 @@ EMS devices have a third section for **Export Slots**, controlling when surplus 
 - Tap an existing slot to edit it
 - Tap the toggle on the left of a slot to enable or disable it without deleting it
 - Swipe left to delete a slot
+
+<a href={newChargeSlot.src} target="_blank" rel="noopener">
+  <Image src={newChargeSlot} alt="New Charge Slot dialog showing start time, end time, and a Target SOC slider" />
+</a>
 
 <Aside type="tip">
   You can disable a slot temporarily using its toggle rather than deleting it. The time and SOC values are preserved on the inverter and re-enabled when you toggle it back on.

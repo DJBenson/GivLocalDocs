@@ -13,9 +13,6 @@ export default defineConfig({
                 src: './src/assets/icon.png',
                 replacesTitle: false,
             },
-            social: [
-                { icon: 'github', label: 'GitHub', href: 'https://github.com/Thomserve/GivLocalApp' },
-            ],
             sidebar: [
                 {
                     label: 'Getting Started',

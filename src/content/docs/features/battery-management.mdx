@@ -3,7 +3,11 @@ title: Battery Management
 description: Monitoring and controlling your battery.
 ---
 
+import { Image } from 'astro:assets';
 import { Aside } from '@astrojs/starlight/components';
+import quickActions from '../../../assets/screenshots/battery-management/quick-actions.png';
+import cardToday from '../../../assets/screenshots/battery-management/card-today.png';
+import cardLifetime from '../../../assets/screenshots/battery-management/card-lifetime.png';
 
 GivLocal gives you direct control over your battery's charge and discharge behaviour.
 
@@ -14,6 +18,10 @@ From the Dashboard, three buttons let you override the current mode immediately:
 - **Charge Now** - charges the battery as fast as possible (up to the configured charge power limit)
 - **Discharge Now** - discharges the battery to home (up to the configured discharge power limit)
 - **Pause** - holds the battery at its current state of charge
+
+<a href={quickActions.src} target="_blank" rel="noopener">
+  <Image src={quickActions} alt="Dashboard showing the Charge Now, Discharge Now, and Pause quick action buttons above the battery card" />
+</a>
 
 <Aside type="caution">
   Quick actions override active schedules until the next scheduled event or until you cancel them manually.
@@ -28,6 +36,16 @@ The battery card on the Dashboard shows:
 - Current power in kW
 - Estimated time to full or empty
 - Total and usable capacity in kWh
+
+Swipe the card to see two more pages: today's charged/discharged totals, and lifetime charged/discharged totals.
+
+<a href={cardToday.src} target="_blank" rel="noopener">
+  <Image src={cardToday} alt="Battery card showing today's power, charged, and discharged totals" />
+</a>
+
+<a href={cardLifetime.src} target="_blank" rel="noopener">
+  <Image src={cardLifetime} alt="Battery card showing lifetime total charged and discharged" />
+</a>
 
 ## Battery reserve
 

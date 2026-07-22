@@ -3,6 +3,10 @@ title: Energy Stats
 description: Today's solar, consumption, import and export figures.
 ---
 
+import { Image } from 'astro:assets';
+import today from '../../../assets/screenshots/energy-stats/today.png';
+import lifetime from '../../../assets/screenshots/energy-stats/lifetime.png';
+
 The Energy Stats section shows today's cumulative energy figures, pulled directly from your inverter's registers.
 
 ## Figures shown
@@ -15,6 +19,16 @@ The Energy Stats section shows today's cumulative energy figures, pulled directl
 | Export (Today) | Total energy exported to the grid today |
 
 Values are shown in kWh and reset at midnight.
+
+<a href={today.src} target="_blank" rel="noopener">
+  <Image src={today} alt="Energy Stats grid showing today's Solar, Home, Import, and Export figures" />
+</a>
+
+Swipe the grid to see lifetime totals for the same four figures, shown in MWh.
+
+<a href={lifetime.src} target="_blank" rel="noopener">
+  <Image src={lifetime} alt="Energy Stats grid showing lifetime Solar, Home, Import, and Export totals" />
+</a>
 
 ## Battery card
 

@@ -9,6 +9,7 @@ import controls from '../../../assets/screenshots/ev-charger/controls.png';
 import schedule from '../../../assets/screenshots/ev-charger/schedule.png';
 import dashboardOrb from '../../../assets/screenshots/ev-charger/dashboard-orb.png';
 import advancedControls from '../../../assets/screenshots/ev-charger/advanced-controls.png';
+import status from '../../../assets/screenshots/ev-charger/status.png';
 
 <Aside>
   EV Charger controls require **GivLocal Pro**.
@@ -59,6 +60,10 @@ A large indicator shows the current charging state:
 | Unstable CP | Control pilot signal issue |
 
 Below the status indicator you'll see session energy delivered (kWh), session duration, and any active error codes. If an error code is shown, consult the GivEnergy EV Charger documentation or contact your installer.
+
+<a href={status.src} target="_blank" rel="noopener">
+  <Image src={status} alt="EV Charger status card showing Idle/Unplugged state, charge start/end time, session duration, session energy, and error status" />
+</a>
 
 ## Controls
 

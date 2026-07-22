@@ -3,6 +3,9 @@ title: Live Power Flow
 description: The animated real-time power flow dashboard.
 ---
 
+import { Image } from 'astro:assets';
+import powerFlow from '../../../assets/screenshots/power-flow/power-flow.png';
+
 The Dashboard shows an animated diagram of how power is moving through your system right now, updated on your configured refresh interval.
 
 ## What's shown
@@ -14,6 +17,10 @@ The Dashboard shows an animated diagram of how power is moving through your syst
 | Home | Current home consumption |
 | Grid | Import or export and current power |
 | EV Charger | Charge rate if an EV charger is connected |
+
+<a href={powerFlow.src} target="_blank" rel="noopener">
+  <Image src={powerFlow} alt="Live power flow diagram showing Solar, Home, Battery, and Grid nodes with current power in watts" />
+</a>
 
 Animated arrows on the flow lines indicate direction. When **Power-based Speed** is enabled in Settings, the arrows animate faster at higher power levels.
 
