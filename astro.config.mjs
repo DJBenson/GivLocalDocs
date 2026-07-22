@@ -45,6 +45,8 @@ export default defineConfig({
                         { label: 'Appearance & Theme', slug: 'app-settings/appearance' },
                         { label: 'Dashboard', slug: 'app-settings/dashboard' },
                         { label: 'Connection & Polling', slug: 'app-settings/connection' },
+                        { label: 'Quick Actions', slug: 'app-settings/quick-actions' },
+                        { label: 'Battery Diagnostics', slug: 'app-settings/battery-diagnostics' },
                         { label: 'Diagnostics & Advanced', slug: 'app-settings/diagnostics' },
                     ],
                 },

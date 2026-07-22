@@ -25,6 +25,7 @@
 - [ ] EMS Controls section (EMS device only, requires GivLocal Pro)
 - [ ] Service section showing restart options (requires GivLocal Pro)
 - [ ] Commissioning section (requires GivLocal Installer)
+  - Note: the Restore Defaults power-limit table was corrected — Gateway resets to 100%/100%, but AC-Coupled actually resets to 50%/50% (it has a real DC battery circuit, unlike Gateway). No screenshot impact, content-only fix.
 
 ## App Settings
 
@@ -36,16 +37,25 @@
 
 ### Connection & Polling (`app-settings/connection`)
 - [x] Settings > Connection screen showing refresh intervals
-  - Note: the page text also describes a "Polling method" (Default/Full Telemetry/Battery Meter) and "Quick Actions power settings" subsection under Connection — neither matches the current build (polling method is now a numbered Method 1–6 picker under Diagnostics, and Quick Actions power settings is its own top-level settings section). Flagged for a content review, not just a screenshot gap.
+  - Resolved: "Quick Actions power settings" has been moved out to its own page/section (see below) since it's a separate top-level settings section in the app, not part of Connection. The "Polling method" table (Default/Full Telemetry/Battery Meter) was re-verified against source and does correctly describe the Connection section's Polling Method dropdown — no change needed there.
+- [ ] Adaptive connection details screen (Status, Inverter, Observations, and the reset action) — new content added for the previously-undocumented Adaptive Inverter Connection toggle
+
+### Quick Actions (`app-settings/quick-actions`) — new page
+- [ ] Settings > Quick Actions screen showing both "Use Max Power" toggles
+
+### Battery Diagnostics (`app-settings/battery-diagnostics`) — new page
+- [ ] Settings > Battery Diagnostics screen showing the Show Calculated State of Health toggle
 
 ### Diagnostics & Advanced (`app-settings/diagnostics`)
 - [x] Settings > Diagnostics screen
 - [x] Connection Benchmark results screen
+  - Note: this page now also documents "Permissive Device Detection" (previously only visible in the screenshot's alt text, never explained in prose). The existing screenshot already shows it, so no new capture is needed here.
 
 ## Remote Access
 
 ### Automatic Wi-Fi Switching (`remote-access/automatic-switching`)
-- [ ] Settings > Remote Access > Automatic Switching screen showing registered networks (requires GivLocal Pro)
+- [ ] Settings > Remote Access section with Tailscale and Automatic Switching expanded, showing registered networks (requires GivLocal Pro)
+  - Note: page content corrected — this is a nested toggle inside the Tailscale block of the Remote Access section, not a standalone screen. Setup steps and button labels ("Add Current", pencil icon for manual entry) updated to match the current build.
 
 ## Cross-Platform Sharing (`cross-platform-sharing`)
 - [x] Settings > License section showing Free/Pro/Installer state and available actions

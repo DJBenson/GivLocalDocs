@@ -44,7 +44,6 @@ While this screen is open it shows whether the code has been used yet, and close
 
 - **One device at a time.** A code can only be activated on a single device. While it's active, the donor device can't hand out a new code to a different device without first deactivating the current one.
 - **Occasional connectivity required.** The shared entitlement checks in with GivLocal's license server from time to time. It keeps working for a while if the device is offline, but if it can't check in for an extended period the shared unlock will lapse until it reconnects — everything else in GivLocal continues to work normally regardless of connectivity.
-- **Tamper protection.** Entitlements are cryptographically signed and verified against GivLocal's license server, so they can't be edited or forged on-device. The app also guards against manipulating the device clock to get around the periodic check-in.
 
 ## Deactivating a licence
 

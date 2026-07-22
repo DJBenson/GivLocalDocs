@@ -140,8 +140,12 @@ Power limits are reset differently by type:
 
 | Inverter type | Charge Power Limit | Discharge Power Limit |
 |---------------|-------------------|----------------------|
-| Hybrid / All-in-One / EMS | 50% | 50% |
-| Gateway / AC-Coupled | 100% | 100% |
+| Hybrid / All-in-One / AC-Coupled / EMS | 50% | 50% |
+| Gateway | 100% | 100% |
+
+<Aside type="note">
+  Gateway has no DC battery circuit of its own, so its power limit reset only affects the AC-side schedule limit, which restores to 100%. AC-Coupled has a real DC battery circuit and resets to 50% like the other battery-attached types.
+</Aside>
 
 <Aside type="note">
   Restore Defaults clears the schedule **enable flags** but does not touch slot times or target SOC values stored in the Schedules tab. Your configured charge and discharge windows remain on the inverter — they are just disabled. Re-enable them from the Schedules tab when you are ready.

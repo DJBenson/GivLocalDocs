@@ -4,6 +4,7 @@ description: Configuring how GivLocal connects to and polls your inverter.
 ---
 
 import { Image } from 'astro:assets';
+import { Aside } from '@astrojs/starlight/components';
 import connection from '../../../assets/screenshots/app-settings/connection.png';
 
 Open **Settings → Connection** to control how often GivLocal fetches data and how it communicates with your hardware.
@@ -33,12 +34,16 @@ Controls how GivLocal reads data from the inverter:
 
 If you are unsure which method to use, run the **Connection Benchmark** tool in **Settings → Diagnostics** — it tests each method against your hardware and recommends the best fit.
 
-## Quick Actions power settings
+<Aside type="tip">
+  Looking for the max power options for Charge Now / Discharge Now? Those live in [Settings → Quick Actions](/app-settings/quick-actions/), not here.
+</Aside>
 
-| Setting | Description |
-|---------|-------------|
-| Use Max Power for Quick Charge | Temporarily raises the battery charge power limit when Charge Now is tapped |
-| Use Max Power for Quick Discharge | Temporarily raises the battery discharge power limit when Discharge Now is tapped |
+## Adaptive Inverter Connection
 
-When enabled, quick actions use the maximum hardware-supported power rate rather than your configured power limit. The limit is restored when the quick action ends.
+When enabled, GivLocal learns safe connection timings for each inverter and connection route (local network, Tailscale, port forwarding) and adjusts its own request pacing accordingly. It never changes inverter controls or Modbus registers — it only affects how GivLocal talks to the device.
+
+Tap **Adaptive Status** to open a details view showing the current status, dashboard refresh allowance, initial response allowance, request pacing, and when the timings were last adjusted. From here you can also reset the learned data back to defaults.
+
+## Screenshots needed
+- Adaptive connection details screen (Status, Inverter, Observations, and the reset action)
 

@@ -35,6 +35,10 @@ Previous benchmark results are shown so you can compare across sessions.
 
 Selects the connection strategy GivLocal uses to communicate with your inverter. Method 3 is the default and works for most devices. If you experience connection issues, run the Connection Benchmark to find the best method for your setup.
 
+## Permissive Device Detection
+
+When enabled, the Devices screen shows hardware found during scanning even if its model code isn't recognised by GivLocal. This is useful for newer or less common GivEnergy hardware that isn't yet explicitly known to the app. Turn it off if scans start picking up unwanted or unrelated devices on your network.
+
 ## Verbose Frame Logging
 
 When enabled, GivLocal captures the raw bytes sent and received in each communication with the inverter. This is primarily useful for bug reports or diagnosing unusual behaviour.
@@ -48,10 +52,6 @@ When enabled, GivLocal captures the raw bytes sent and received in each communic
 When enabled, GivLocal shows a confirmation prompt before writing any setting to the inverter. This adds a safety step to prevent accidental changes.
 
 A separate **Confirm Commissioning Writes** toggle applies the same protection to settings in the Installer / Commissioning section.
-
-## Battery Diagnostics
-
-**Show Calculated State of Health** — displays a calculated battery health percentage on the battery cell detail sheet, when BMS capacity data is available from the inverter.
 
 ## Debug Log
 

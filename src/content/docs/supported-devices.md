@@ -11,7 +11,7 @@ GivLocal supports a wide range of GivEnergy hardware, discovered automatically o
 |--------|-------|
 | **Gateway** | Gen 1 and Gen 2 |
 | **All In One (AIO)** | Gen 1 and Gen 2 |
-| **Hybrid Inverters** | Gen 1, Gen 2 and Gen 3 |
+| **Hybrid Inverters** | Gen 1, Gen 2, Gen 3 and Gen 4 |
 | **AC-Coupled Inverter** | |
 | **EMS** | Energy Management System devices with child device monitoring and control |
 | **Three Phase Inverter** | LV and HV variants |
