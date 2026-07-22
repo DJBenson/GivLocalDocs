@@ -3,7 +3,11 @@ title: Inverter Settings
 description: Full reference for the Inverter screen sections and controls.
 ---
 
+import { Image } from 'astro:assets';
 import { Aside } from '@astrojs/starlight/components';
+import overview from '../../../assets/screenshots/inverter-settings/overview.png';
+import writeLog from '../../../assets/screenshots/inverter-settings/write-log.png';
+import liveTelemetry from '../../../assets/screenshots/inverter-settings/live-telemetry.png';
 
 The Inverter screen provides access to device information, diagnostics, and all configurable settings for your inverter or gateway. Sections are collapsible — tap a section header to expand it.
 
@@ -17,6 +21,8 @@ The Inverter screen provides access to device information, diagnostics, and all 
 | Status | Current inverter status (e.g. On Grid, Off Grid) |
 | Last Updated | Timestamp of the most recent data read |
 
+<Image src={overview} alt="Inverter Overview section showing product, serial, firmware, and status" />
+
 ## Fault Log
 
 Lists active and historical faults reported by the inverter. Faults can be reviewed and alerts cleared from here. See [Fault Log](/features/fault-log/) for full details.
@@ -27,6 +33,8 @@ A timestamped record of every setting written to the inverter from GivLocal. Eac
 
 Useful for verifying that changes were applied, or for diagnosing unexpected behaviour after a settings change.
 
+<Image src={writeLog} alt="Write Log screen with date, sort, and search filters" />
+
 ## Live Telemetry
 
 Displays raw register values from the inverter in real time, grouped into categories:
@@ -35,6 +43,8 @@ Displays raw register values from the inverter in real time, grouped into catego
 - **Grid** — grid voltage, frequency, and power
 - **EPS** — emergency power supply readings
 - **Temperature** — inverter and battery temperature sensors
+
+<Image src={liveTelemetry} alt="Live Telemetry section showing PV string voltages, currents, and power" />
 
 ## Battery Control
 
@@ -172,12 +182,9 @@ Tools for troubleshooting. None of these change inverter settings.
 **Register Sweep** — scans all registers and lists only those with non-zero values. A quicker way to find active or changed registers without wading through the full dump.
 
 ## Screenshots needed
-- Inverter overview section
-- Write Log screen
-- Live Telemetry screen
-- Battery Control section expanded
-- Power Limits section expanded
-- Advanced section (Export Power Priority, Battery SOC Calibration)
-- EMS Controls section (EMS device only)
-- Service section (Restore Defaults + restart options)
-- Commissioning section (Installer tier)
+- Battery Control section expanded (requires GivLocal Pro)
+- Power Limits section expanded (requires GivLocal Pro)
+- Advanced section (Export Power Priority, Battery SOC Calibration) (requires GivLocal Pro)
+- EMS Controls section (EMS device only, requires GivLocal Pro)
+- Service section (Restore Defaults + restart options) (requires GivLocal Pro)
+- Commissioning section (requires GivLocal Installer)

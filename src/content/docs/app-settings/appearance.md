@@ -5,6 +5,8 @@ description: Customising the look of GivLocal.
 
 Open **Settings → Appearance** to change how GivLocal looks.
 
+![Settings Appearance section showing Theme and Colour Theme options](../../../assets/screenshots/app-settings/appearance.png)
+
 ## Theme
 
 Choose between three modes:
@@ -29,5 +31,3 @@ GivLocal includes five colour palettes:
 
 The **High Contrast** theme is designed for use in bright outdoor environments where the standard themes may be harder to read.
 
-## Screenshots needed
-- Settings > Appearance showing theme and colour options

@@ -5,6 +5,8 @@ description: Configuring how GivLocal connects to and polls your inverter.
 
 Open **Settings → Connection** to control how often GivLocal fetches data and how it communicates with your hardware.
 
+![Settings Connection section showing refresh intervals and adaptive connection toggle](../../../assets/screenshots/app-settings/connection.png)
+
 ## Refresh intervals
 
 | Setting | Description | Default |
@@ -35,5 +37,3 @@ If you are unsure which method to use, run the **Connection Benchmark** tool in 
 
 When enabled, quick actions use the maximum hardware-supported power rate rather than your configured power limit. The limit is restored when the quick action ends.
 
-## Screenshots needed
-- Settings > Connection screen showing refresh intervals and polling method

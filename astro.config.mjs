@@ -66,6 +66,10 @@ export default defineConfig({
                     slug: 'pro',
                 },
                 {
+                    label: 'Cross-Platform Sharing',
+                    slug: 'cross-platform-sharing',
+                },
+                {
                     label: 'Legal',
                     items: [
                         { label: 'End User Licence Agreement', slug: 'eula' },

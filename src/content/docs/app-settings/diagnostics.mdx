@@ -3,9 +3,14 @@ title: Diagnostics & Advanced
 description: Advanced connection diagnostics and troubleshooting tools.
 ---
 
+import { Image } from 'astro:assets';
 import { Aside, Steps } from '@astrojs/starlight/components';
+import diagnostics from '../../../assets/screenshots/app-settings/diagnostics.png';
+import benchmark from '../../../assets/screenshots/app-settings/connection-benchmark.png';
 
 Open **Settings → Diagnostics** for tools to diagnose connection problems and tune how GivLocal communicates with your hardware.
+
+<Image src={diagnostics} alt="Settings Diagnostics section showing Inverter Method, Permissive Device Detection, and Connection Benchmark" />
 
 ## Connection Benchmark
 
@@ -19,6 +24,8 @@ Tests each available connection method against your inverter and recommends the 
 </Steps>
 
 Previous benchmark results are shown so you can compare across sessions.
+
+<Image src={benchmark} alt="Connection Benchmark results showing per-method timings and a recommended method" />
 
 ## Inverter Method
 
@@ -54,6 +61,3 @@ GivLocal maintains an internal debug log that can be exported for troubleshootin
 
 **Settings → Reset App Defaults** wipes all preferences and returns GivLocal to a clean state, as if freshly installed.
 
-## Screenshots needed
-- Settings > Diagnostics screen
-- Connection Benchmark results screen

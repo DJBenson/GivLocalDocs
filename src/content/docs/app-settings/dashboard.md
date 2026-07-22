@@ -5,6 +5,8 @@ description: Customising the behaviour and display of the Dashboard.
 
 Open **Settings → Dashboard** to customise how the Dashboard looks and behaves.
 
+![Settings Dashboard section showing several of the toggle options](../../../assets/screenshots/app-settings/dashboard.png)
+
 ## Options
 
 ### Power-based Speed
@@ -34,5 +36,3 @@ When enabled, a banner is displayed on the Dashboard whenever an inverter fault 
 ### Haptic Feedback
 Vibrates the device when a command is sent to the inverter or charger (e.g. Charge Now, Discharge Now). Can be disabled if you find the vibration distracting.
 
-## Screenshots needed
-- Settings > Dashboard showing all options
