@@ -8,3 +8,19 @@
     --sl-color-accent: #1a8c3f;
     --sl-color-accent-high: #0d4a22;
 }
+
+/* Screenshots are phone-shaped and full-resolution, so they display much
+   larger than needed inline. Show them as thumbnails, linked to the
+   full-resolution image so a click/tap opens it at full size. */
+.sl-markdown-content a:has(> img) {
+    display: block;
+    width: fit-content;
+    max-width: 360px;
+    margin: 1rem auto;
+}
+.sl-markdown-content a:has(> img) img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--sl-color-gray-5);
+}

@@ -3,9 +3,14 @@ title: Battery Cell Details
 description: Viewing per-cell voltage, temperature, and state of health data.
 ---
 
+import { Image } from 'astro:assets';
+import hvBattery from '../../../assets/screenshots/battery-cell-details/hv-battery.png';
+
 Tapping the battery card on the Dashboard opens a detailed cell-level view of your battery. The data shown depends on your battery type.
 
-![LV battery cell detail sheet showing per-cell voltages, voltage summary, and temperatures](../../../assets/screenshots/battery-cell-details/lv-battery.png)
+<a href={hvBattery.src} target="_blank" rel="noopener">
+  <Image src={hvBattery} alt="HV battery cell detail sheet showing per-pack cell voltages, voltage summary, and temperatures" />
+</a>
 
 ## What's shown
 
@@ -26,4 +31,4 @@ When your battery's BMS reports capacity data, GivLocal calculates and displays 
 To enable State of Health display, turn on **Show Calculated State of Health** in **Settings → Battery Diagnostics**.
 
 ## Screenshots needed
-- Battery cell detail sheet — HV battery (BMU/BCU pack view); no HV battery hardware was available to capture this
+- Battery cell detail sheet — LV battery (per-cell voltages + temperatures); no LV battery hardware was available to capture this

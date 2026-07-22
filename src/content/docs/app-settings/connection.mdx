@@ -3,9 +3,14 @@ title: Connection & Polling
 description: Configuring how GivLocal connects to and polls your inverter.
 ---
 
+import { Image } from 'astro:assets';
+import connection from '../../../assets/screenshots/app-settings/connection.png';
+
 Open **Settings → Connection** to control how often GivLocal fetches data and how it communicates with your hardware.
 
-![Settings Connection section showing refresh intervals and adaptive connection toggle](../../../assets/screenshots/app-settings/connection.png)
+<a href={connection.src} target="_blank" rel="noopener">
+  <Image src={connection} alt="Settings Connection section showing refresh intervals and adaptive connection toggle" />
+</a>
 
 ## Refresh intervals
 

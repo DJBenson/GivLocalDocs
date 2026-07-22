@@ -3,8 +3,8 @@
 ## Features
 
 ### Battery Cell Details (`features/battery-cell-details`)
-- [x] Battery cell detail sheet — LV battery (per-cell voltages + temperatures)
-- [ ] Battery cell detail sheet — HV battery (BMU/BCU pack view); no HV battery hardware was available to capture this
+- [ ] Battery cell detail sheet — LV battery (per-cell voltages + temperatures); no LV battery hardware was available to capture this
+- [x] Battery cell detail sheet — HV battery (BMU/BCU pack view)
 
 ### Fault Log (`features/fault-log`)
 - [ ] Fault Log screen showing active faults; no connected test device currently has a fault to capture
