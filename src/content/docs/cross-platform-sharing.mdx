@@ -7,6 +7,9 @@ import { Image } from 'astro:assets';
 import { Aside } from '@astrojs/starlight/components';
 import license from '../../assets/screenshots/cross-platform-sharing/license-section.png';
 import redeemCode from '../../assets/screenshots/cross-platform-sharing/redeem-code.png';
+import licenseInstaller from '../../assets/screenshots/cross-platform-sharing/license-installer-section.png';
+import activateNotYet from '../../assets/screenshots/cross-platform-sharing/activate-not-yet.png';
+import activateActive from '../../assets/screenshots/cross-platform-sharing/activate-active.png';
 
 If you've bought GivLocal Pro or Installer on one platform, you can unlock the same tier on your other device (iOS or Android) without paying again. There's no account or sign-in - a short code links the two devices directly.
 
@@ -20,10 +23,23 @@ The **License** section in Settings shows your current tier and the actions avai
 
 1. Open **Settings → License**
 2. Tap **Share Code** next to **Activate on Another Device**
+
+<a href={licenseInstaller.src} target="_blank" rel="noopener">
+  <Image src={licenseInstaller} alt="Settings License section showing an Installer tier with Activate on Another Device and a Share Code button" />
+</a>
+
 3. GivLocal verifies your purchase and generates a one-time code, shown as text and a QR code
 4. Share it with your other device - use the **Share** button, copy the code, or let the other device scan the QR code
 
-While this screen is open it shows whether the code has been used yet, and closes automatically as soon as your other device activates it.
+<a href={activateNotYet.src} target="_blank" rel="noopener">
+  <Image src={activateNotYet} alt="Activate on Another Device screen showing the QR code, share code, and Not yet activated status" />
+</a>
+
+While this screen is open it shows whether the code has been used yet, and closes automatically as soon as your other device activates it:
+
+<a href={activateActive.src} target="_blank" rel="noopener">
+  <Image src={activateActive} alt="Activate on Another Device screen showing the same code now marked Active on your other device" />
+</a>
 
 ## Setting up the device without a licence
 
@@ -51,6 +67,3 @@ Use this to move your entitlement to a different device, or to replace one that'
 
 - **From the device that received the code:** open **Settings → License** and tap **Deactivate** next to **Linked Device**. This immediately drops the shared entitlement on that device and frees the original device to share with a new one.
 - **From the device that made the purchase:** open **Settings → License**, tap **Share Code**, then tap **Generate a new code instead**. Confirm the warning - this immediately invalidates the previous code and disconnects whichever device was using it, which is useful if that device is lost or broken and you can't deactivate it yourself.
-
-## Screenshots needed
-- Activate on Another Device screen showing the QR code and activation status (requires a device that already owns Pro/Installer)

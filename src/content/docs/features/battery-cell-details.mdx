@@ -5,8 +5,13 @@ description: Viewing per-cell voltage, temperature, and state of health data.
 
 import { Image } from 'astro:assets';
 import hvBattery from '../../../assets/screenshots/battery-cell-details/hv-battery.png';
+import lvBattery from '../../../assets/screenshots/battery-cell-details/lv-battery.png';
 
 Tapping the battery card on the Dashboard opens a detailed cell-level view of your battery. The data shown depends on your battery type.
+
+<a href={lvBattery.src} target="_blank" rel="noopener">
+  <Image src={lvBattery} alt="LV battery detail sheet showing per-cell voltages, voltage summary, and cell temperatures" />
+</a>
 
 <a href={hvBattery.src} target="_blank" rel="noopener">
   <Image src={hvBattery} alt="HV battery cell detail sheet showing per-pack cell voltages, voltage summary, and temperatures" />
@@ -29,6 +34,3 @@ Tapping the battery card on the Dashboard opens a detailed cell-level view of yo
 When your battery's BMS reports capacity data, GivLocal calculates and displays a State of Health percentage. This reflects how much usable capacity remains relative to the original design capacity.
 
 To enable State of Health display, turn on **Show Calculated State of Health** in [Settings → Battery Diagnostics](/app-settings/battery-diagnostics/).
-
-## Screenshots needed
-- Battery cell detail sheet - LV battery (per-cell voltages + temperatures); no LV battery hardware was available to capture this

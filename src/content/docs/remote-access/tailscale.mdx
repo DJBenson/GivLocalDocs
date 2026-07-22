@@ -3,7 +3,10 @@ title: Tailscale
 description: Using Tailscale for secure remote access to your GivEnergy system.
 ---
 
+import { Image } from 'astro:assets';
 import { Steps, Aside } from '@astrojs/starlight/components';
+import tailscaleSetup from '../../../assets/screenshots/remote-access/tailscale-setup.png';
+import tailscaleConnected from '../../../assets/screenshots/remote-access/tailscale-connected.png';
 
 <Aside>
   Tailscale remote access requires **GivLocal Pro**.
@@ -28,6 +31,16 @@ import { Steps, Aside } from '@astrojs/starlight/components';
 6. **Connect to your inverter** using its local IP address - Tailscale routes the traffic through the subnet router at home when you're away.
 
 </Steps>
+
+<a href={tailscaleSetup.src} target="_blank" rel="noopener">
+  <Image src={tailscaleSetup} alt="Remote Access section showing Use Tailscale, Node Name, Auth Key, and Login" />
+</a>
+
+Once logged in, the section shows your connection status, Tailscale IP address, and Disconnect/Logout actions:
+
+<a href={tailscaleConnected.src} target="_blank" rel="noopener">
+  <Image src={tailscaleConnected} alt="Remote Access section showing Tailscale Status Connected, IP Address, and Disconnect/Logout buttons" />
+</a>
 
 <Aside type="note">
   Network scanning is not available over Tailscale. When connected remotely, enter your inverter's local IP address using **Manual Connection** rather than scanning.

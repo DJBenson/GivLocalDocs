@@ -3,7 +3,9 @@ title: Automatic Wi-Fi Switching
 description: Automatically switching between local and Tailscale connections based on your Wi-Fi network.
 ---
 
+import { Image } from 'astro:assets';
 import { Aside, Steps } from '@astrojs/starlight/components';
+import automaticSwitching from '../../../assets/screenshots/remote-access/automatic-switching.png';
 
 GivLocal can automatically switch between your local network connection and Tailscale depending on which Wi-Fi network your phone is connected to. When you're at home it connects directly; when you're away it routes through Tailscale.
 
@@ -33,5 +35,6 @@ Automatic Switching lives inside the Tailscale block of the Remote Access sectio
 
 Once enabled, GivLocal handles the switch transparently whenever you move between networks.
 
-## Screenshots needed
-- Settings > Remote Access section with Tailscale and Automatic Switching expanded, showing registered networks
+<a href={automaticSwitching.src} target="_blank" rel="noopener">
+  <Image src={automaticSwitching} alt="Remote Access section with Automatic Switching enabled, showing Current Wi-Fi, Add Current, and a registered Test-WiFi network" />
+</a>
