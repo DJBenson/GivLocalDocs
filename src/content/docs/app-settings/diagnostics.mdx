@@ -11,8 +11,16 @@ import benchmark from '../../../assets/screenshots/app-settings/connection-bench
 Open **Settings → Diagnostics** for tools to diagnose connection problems and tune how GivLocal communicates with your hardware.
 
 <a href={diagnostics.src} target="_blank" rel="noopener">
-  <Image src={diagnostics} alt="Settings Diagnostics section showing Inverter Method, Permissive Device Detection, and Connection Benchmark" />
+  <Image src={diagnostics} alt="Settings Diagnostics section showing Inverter Method and Connection Benchmark" />
 </a>
+
+## Support Bundle
+
+<Aside type="tip">
+  **Support Bundle** is not part of the Diagnostics section - it's a single button at the very top of the Settings sheet, above **User Manual** and the settings sections.
+</Aside>
+
+Captures a register dump from each connected inverter (plus a combined plant dump if you have more than one), together with the debug log, and zips them into a single file ready to share with support. This is the fastest way to get GivLocal-side and inverter-side diagnostic data to support in one step, rather than exporting the debug log on its own.
 
 ## Connection Benchmark
 
@@ -35,9 +43,9 @@ Previous benchmark results are shown so you can compare across sessions.
 
 Selects the connection strategy GivLocal uses to communicate with your inverter. Method 3 is the default and works for most devices. If you experience connection issues, run the Connection Benchmark to find the best method for your setup.
 
-## Permissive Device Detection
+## Permissive Device Detection (NOTE: This setting is removed in version 1.0.5 and later)
 
-When enabled, the Devices screen shows hardware found during scanning even if its model code isn't recognised by GivLocal. This is useful for newer or less common GivEnergy hardware that isn't yet explicitly known to the app. Turn it off if scans start picking up unwanted or unrelated devices on your network.
+When enabled, the Devices screen showed hardware found during scanning even if its model code wasn't recognised by GivLocal. This was useful for newer or less common GivEnergy hardware that wasn't yet explicitly known to the app.
 
 ## Verbose Frame Logging
 
@@ -47,21 +55,11 @@ When enabled, GivLocal captures the raw bytes sent and received in each communic
   Verbose Frame Logging generates large amounts of data quickly. Disable it once you have captured the information you need.
 </Aside>
 
-## Confirm Writes
-
-When enabled, GivLocal shows a confirmation prompt before writing any setting to the inverter. This adds a safety step to prevent accidental changes.
-
-A separate **Confirm Commissioning Writes** toggle applies the same protection to settings in the Installer / Commissioning section.
-
 ## Debug Log
 
-GivLocal maintains an internal debug log that can be exported for troubleshooting. Use **Export Log** to share it, or **Clear Log** to reset it.
+GivLocal maintains an internal debug log that can be exported for troubleshooting. Use **Export** next to **Debug Log** to share it, or **Clear** next to **Clear Log** to reset it.
 
-## Reset App Defaults
-
-<Aside type="caution">
-  This clears all settings, saved devices, and cached data. Use as a last resort when the app is in an unrecoverable state.
+<Aside type="tip">
+  Looking for **Confirm Writes** or **Confirm Commissioning Writes**? Those moved to [Settings → General](/app-settings/general/). Looking for **Reset App Defaults**? That moved to [Settings → App Data](/app-settings/app-data/).
 </Aside>
-
-**Settings → Reset App Defaults** wipes all preferences and returns GivLocal to a clean state, as if freshly installed.
 

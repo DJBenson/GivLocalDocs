@@ -40,12 +40,18 @@ export default defineConfig({
                 {
                     label: 'App Settings',
                     items: [
+                        { label: 'General', slug: 'app-settings/general' },
                         { label: 'Appearance & Theme', slug: 'app-settings/appearance' },
-                        { label: 'Dashboard', slug: 'app-settings/dashboard' },
                         { label: 'Connection & Polling', slug: 'app-settings/connection' },
+                        { label: 'Dashboard', slug: 'app-settings/dashboard' },
                         { label: 'Quick Actions', slug: 'app-settings/quick-actions' },
-                        { label: 'Battery Diagnostics', slug: 'app-settings/battery-diagnostics' },
                         { label: 'Diagnostics & Advanced', slug: 'app-settings/diagnostics' },
+                        { label: 'App Data', slug: 'app-settings/app-data' },
+                        {
+                            label: 'Battery Diagnostics',
+                            slug: 'app-settings/battery-diagnostics',
+                            badge: { text: 'Removed in 1.0.5', variant: 'caution' },
+                        },
                     ],
                 },
                 {
@@ -68,6 +74,7 @@ export default defineConfig({
                 {
                     label: 'Cross-Platform Sharing',
                     slug: 'cross-platform-sharing',
+                    badge: { text: '1.0.5+', variant: 'note' },
                 },
                 {
                     label: 'Legal',

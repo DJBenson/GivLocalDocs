@@ -1,0 +1,28 @@
+---
+title: General
+description: Confirmation prompts, haptics, and fault code display.
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+Open **Settings → General** for behaviour that applies across the whole app.
+
+## Confirm Writes
+
+When enabled, GivLocal shows a confirmation prompt before writing any setting to the inverter. This adds a safety step to prevent accidental changes.
+
+## Confirm Commissioning Writes
+
+<Aside type="note">
+  Only shown to Installer tier users. See [Pro & Installer](/pro/).
+</Aside>
+
+Applies the same confirmation-prompt protection as **Confirm Writes**, but to settings in the Installer / Commissioning section. Disable it to apply commissioning changes without confirmation, which speeds up repeated changes during an installation session.
+
+## Haptic Feedback
+
+Vibrates the device when a command is sent to the inverter or charger (e.g. Charge Now, Discharge Now). Can be disabled if you find the vibration distracting.
+
+## Show Fault Codes
+
+When enabled, a banner is displayed on the Dashboard whenever an inverter fault is detected. See [Fault Log](/features/fault-log/) for more detail.

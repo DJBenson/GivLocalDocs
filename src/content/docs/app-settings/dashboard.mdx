@@ -19,7 +19,7 @@ Open **Settings → Dashboard** to customise how the Dashboard looks and behaves
 
 ## Options
 
-### Power-based Speed
+### Power-based Speed (NOTE: This setting is removed in version 1.0.5 and later)
 When enabled, the animated dots on the power flow diagram move faster when more power is flowing. Gives a more intuitive sense of how much energy is being moved. Enabled by default.
 
 ### Hide Solar
@@ -37,15 +37,16 @@ Controls what is shown on the device tabs at the top of the Dashboard:
 ### Average Plant SOC
 When enabled, the SOC shown on the power flow diagram uses the average state of charge across all visible batteries, rather than the highest. Useful for multi-battery systems where you want an overall picture.
 
-### Enable GivTCP-style battery card
+### Enable GivTCP-style battery card (NOTE: This setting is removed in version 1.0.5 and later)
 Adds an optional battery summary card in the style used by GivTCP, showing capacity, charge/discharge totals, and timing estimates on a single card. Swipe the battery card area on the Dashboard to access it.
 
-### Fault Alert Banners
-When enabled, a banner is displayed on the Dashboard whenever an inverter fault is detected. See [Fault Log](/features/fault-log/) for more detail.
-
-### Haptic Feedback
-Vibrates the device when a command is sent to the inverter or charger (e.g. Charge Now, Discharge Now). Can be disabled if you find the vibration distracting.
+### Show implausible BCU values
+Shows battery cell unit (BCU) lifetime charge and discharge totals on the battery detail view even when they are implausibly different from each other. Off by default - GivLocal asks for confirmation the first time you enable it, since the figures may not be reliable.
 
 ### Reset Dashboard Layout
 Restores all inverter and EV charger widgets and their default portrait and landscape layouts. Use this to undo widget customisation done via long-press on the Dashboard - see [Customising the Dashboard](/features/customizing-dashboard/).
+
+<Aside type="tip">
+  Looking for **Show Fault Codes** (previously "Fault Alert Banners") or **Haptic Feedback**? Those moved to [Settings → General](/app-settings/general/).
+</Aside>
 
