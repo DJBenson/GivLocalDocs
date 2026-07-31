@@ -47,11 +47,7 @@ export default defineConfig({
                         { label: 'Quick Actions', slug: 'app-settings/quick-actions' },
                         { label: 'Diagnostics & Advanced', slug: 'app-settings/diagnostics' },
                         { label: 'App Data', slug: 'app-settings/app-data' },
-                        {
-                            label: 'Battery Diagnostics',
-                            slug: 'app-settings/battery-diagnostics',
-                            badge: { text: 'Removed in 1.0.5', variant: 'caution' },
-                        },
+                        { label: 'Battery Diagnostics', slug: 'app-settings/battery-diagnostics' },
                     ],
                 },
                 {
@@ -74,7 +70,6 @@ export default defineConfig({
                 {
                     label: 'Cross-Platform Sharing',
                     slug: 'cross-platform-sharing',
-                    badge: { text: '1.0.5+', variant: 'note' },
                 },
                 {
                     label: 'Legal',
