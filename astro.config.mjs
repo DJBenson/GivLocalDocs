@@ -7,7 +7,8 @@ export default defineConfig({
     integrations: [
         starlight({
             title: 'GivLocal',
-            description: 'Local control for your GivEnergy system - no cloud required.',
+            description:
+                'Documentation for GivLocal, an app for local monitoring and control of your solar and battery system. Works with GivEnergy hardware.',
             favicon: '/favicon.png',
             logo: {
                 src: './src/assets/icon.png',
@@ -80,6 +81,9 @@ export default defineConfig({
                 },
             ],
             customCss: ['./src/styles/custom.css'],
+            components: {
+                Footer: './src/components/Footer.astro',
+            },
         }),
     ],
 });
