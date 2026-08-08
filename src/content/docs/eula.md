@@ -1,6 +1,6 @@
 ---
 title: End User Licence Agreement
-description: End user licence agreement for GivLocal.
+description: End user licence agreement for INVLocal.
 ---
 
 ## End User Licence Agreement
@@ -9,7 +9,7 @@ By downloading, installing, or using this application, you agree to the terms be
 
 ### 1. Licence
 
-GivLocal grants you a limited, personal, non-exclusive, and non-transferable licence to use the application on your own device for your own household or business purposes. This licence does not transfer ownership of the software or any related content.
+INVLocal grants you a limited, personal, non-exclusive, and non-transferable licence to use the application on your own device for your own household or business purposes. This licence does not transfer ownership of the software or any related content.
 
 ### 2. Scope of the application
 

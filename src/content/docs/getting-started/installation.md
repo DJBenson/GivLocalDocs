@@ -1,17 +1,17 @@
 ---
 title: Installation
-description: How to download and install GivLocal on your device.
+description: How to download and install INVLocal on your device.
 ---
 
 ## Android
 
-GivLocal is available now on Google Play.
+INVLocal is available now on Google Play.
 
 [**Download on Google Play**](https://play.google.com/store/apps/details?id=com.thomserve.givlocal)
 
 ## iOS & iPadOS
 
-GivLocal is available now on iPhone and iPad.
+INVLocal is available now on iPhone and iPad.
 
 [**Download on the App Store**](https://apps.apple.com/app/givlocal/id6763407007)
 

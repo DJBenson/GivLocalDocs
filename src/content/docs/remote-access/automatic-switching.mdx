@@ -7,7 +7,7 @@ import { Image } from 'astro:assets';
 import { Aside, Steps } from '@astrojs/starlight/components';
 import automaticSwitching from '../../../assets/screenshots/remote-access/automatic-switching.png';
 
-GivLocal can automatically switch between your local network connection and Tailscale depending on which Wi-Fi network your phone is connected to. When you're at home it connects directly; when you're away it routes through Tailscale.
+INVLocal can automatically switch between your local network connection and Tailscale depending on which Wi-Fi network your phone is connected to. When you're at home it connects directly; when you're away it routes through Tailscale.
 
 <Aside type="note">
   This feature requires Tailscale to be set up first. See the [Tailscale guide](/remote-access/tailscale/).
@@ -15,7 +15,7 @@ GivLocal can automatically switch between your local network connection and Tail
 
 ## How it works
 
-You register your home Wi-Fi network(s) in GivLocal. When your phone is connected to a known network, GivLocal connects to your inverter directly using the local IP. When on any other network, it connects via Tailscale automatically - no manual switching needed.
+You register your home Wi-Fi network(s) in INVLocal. When your phone is connected to a known network, INVLocal connects to your inverter directly using the local IP. When on any other network, it connects via Tailscale automatically - no manual switching needed.
 
 <Aside type="note">
   Automatic switching requires the Location permission on iOS, which is used to detect the current Wi-Fi SSID. No location data is stored or transmitted.
@@ -33,7 +33,7 @@ Automatic Switching lives inside the Tailscale block of the Remote Access sectio
 5. Your registered networks are listed with a close icon to remove them individually
 </Steps>
 
-Once enabled, GivLocal handles the switch transparently whenever you move between networks.
+Once enabled, INVLocal handles the switch transparently whenever you move between networks.
 
 <a href={automaticSwitching.src} target="_blank" rel="noopener">
   <Image src={automaticSwitching} alt="Remote Access section with Automatic Switching enabled, showing Current Wi-Fi, Add Current, and a registered Test-WiFi network" />

@@ -1,9 +1,9 @@
 ---
 title: Supported Devices
-description: GivEnergy hardware compatible with GivLocal.
+description: GivEnergy hardware compatible with INVLocal.
 ---
 
-GivLocal supports a wide range of GivEnergy hardware, discovered automatically over your local network.
+INVLocal supports a wide range of GivEnergy hardware, discovered automatically over your local network.
 
 ## Supported hardware
 
@@ -19,8 +19,8 @@ GivLocal supports a wide range of GivEnergy hardware, discovered automatically o
 
 ## Not sure what you have?
 
-Open GivLocal, tap **Devices**, and let the app discover your hardware automatically. It identifies device types from their Modbus responses.
+Open INVLocal, tap **Devices**, and let the app discover your hardware automatically. It identifies device types from their Modbus responses.
 
 ## Something missing?
 
-If you have GivEnergy hardware that isn't working with GivLocal, please [open an issue on GitHub](https://github.com/Thomserve/GivLocalApp/issues) or contact [Predictive Support LTD](https://predsupport.com/).
+If you have GivEnergy hardware that isn't working with INVLocal, please contact [Predictive Support LTD](https://predsupport.com/).

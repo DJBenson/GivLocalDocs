@@ -6,9 +6,9 @@ export default defineConfig({
     site: 'https://docs.invlocal.app',
     integrations: [
         starlight({
-            title: 'GivLocal',
+            title: 'INVLocal',
             description:
-                'Documentation for GivLocal, an app for local monitoring and control of your solar and battery system. Works with GivEnergy hardware.',
+                'Documentation for INVLocal, an app for local monitoring and control of your solar and battery system. Works with GivEnergy hardware.',
             favicon: '/favicon.png',
             logo: {
                 src: './src/assets/icon.png',

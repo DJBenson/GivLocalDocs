@@ -1,6 +1,6 @@
 ---
 title: Cross-Platform Sharing
-description: Share your GivLocal Pro or Installer purchase between your iOS and Android devices.
+description: Share your INVLocal Pro or Installer purchase between your iOS and Android devices.
 ---
 
 import { Image } from 'astro:assets';
@@ -12,10 +12,10 @@ import activateNotYet from '../../assets/screenshots/cross-platform-sharing/acti
 import activateActive from '../../assets/screenshots/cross-platform-sharing/activate-active.png';
 
 <Aside type="note">
-  Cross-platform sharing requires **GivLocal 1.0.5 or later** on both devices. It is not available in 1.0.4 or earlier.
+  Cross-platform sharing requires **INVLocal 1.0.5 or later** on both devices. It is not available in 1.0.4 or earlier.
 </Aside>
 
-If you've bought GivLocal Pro or Installer on one platform, you can unlock the same tier on your other device (iOS or Android) without paying again. There's no account or sign-in - a short code links the two devices directly.
+If you've bought INVLocal Pro or Installer on one platform, you can unlock the same tier on your other device (iOS or Android) without paying again. There's no account or sign-in - a short code links the two devices directly.
 
 The **License** section in Settings shows your current tier and the actions available for it:
 
@@ -32,7 +32,7 @@ The **License** section in Settings shows your current tier and the actions avai
   <Image src={licenseInstaller} alt="Settings License section showing an Installer tier with Activate on Another Device and a Share Code button" />
 </a>
 
-3. GivLocal verifies your purchase and generates a one-time code, shown as text and a QR code
+3. INVLocal verifies your purchase and generates a one-time code, shown as text and a QR code
 4. Share it with your other device - use the **Share** button, copy the code, or let the other device scan the QR code
 
 <a href={activateNotYet.src} target="_blank" rel="noopener">
@@ -63,7 +63,7 @@ While this screen is open it shows whether the code has been used yet, and close
 </Aside>
 
 - **One device at a time.** A code can only be activated on a single device. While it's active, the donor device can't hand out a new code to a different device without first deactivating the current one.
-- **Occasional connectivity required.** The shared entitlement checks in with GivLocal's license server from time to time. It keeps working for a while if the device is offline, but if it can't check in for an extended period the shared unlock will lapse until it reconnects - everything else in GivLocal continues to work normally regardless of connectivity.
+- **Occasional connectivity required.** The shared entitlement checks in with INVLocal's license server from time to time. It keeps working for a while if the device is offline, but if it can't check in for an extended period the shared unlock will lapse until it reconnects - everything else in INVLocal continues to work normally regardless of connectivity.
 
 ## Deactivating a licence
 

@@ -1,6 +1,6 @@
 ---
 title: Connection & Polling
-description: Configuring how GivLocal connects to and polls your inverter.
+description: Configuring how INVLocal connects to and polls your inverter.
 ---
 
 import { Image } from 'astro:assets';
@@ -8,7 +8,7 @@ import { Aside } from '@astrojs/starlight/components';
 import connection from '../../../assets/screenshots/app-settings/connection.png';
 import adaptiveDetails from '../../../assets/screenshots/app-settings/adaptive-connection-details.png';
 
-Open **Settings → Connection** to control how often GivLocal fetches data and how it communicates with your hardware.
+Open **Settings → Connection** to control how often INVLocal fetches data and how it communicates with your hardware.
 
 <a href={connection.src} target="_blank" rel="noopener">
   <Image src={connection} alt="Settings Connection section showing refresh intervals and adaptive connection toggle" />
@@ -25,7 +25,7 @@ Live data refresh can be set between **10 and 120 seconds** in steps of 10. A sh
 
 ## Polling method
 
-Controls how GivLocal reads data from the inverter:
+Controls how INVLocal reads data from the inverter:
 
 | Method | Description |
 |--------|-------------|
@@ -41,7 +41,7 @@ If you are unsure which method to use, run the **Connection Benchmark** tool in 
 
 ## Adaptive Inverter Connection
 
-When enabled, GivLocal learns safe connection timings for each inverter and connection route (local network, Tailscale, port forwarding) and adjusts its own request pacing accordingly. It never changes inverter controls or Modbus registers - it only affects how GivLocal talks to the device.
+When enabled, INVLocal learns safe connection timings for each inverter and connection route (local network, Tailscale, port forwarding) and adjusts its own request pacing accordingly. It never changes inverter controls or Modbus registers - it only affects how INVLocal talks to the device.
 
 Tap **Adaptive Status** to open a details view showing the inverter and route being learned, the current status and confidence level, how many observations have been made, the dashboard refresh allowance, initial response allowance, request pacing, and when the timings were last adjusted. From here you can also reset the learned data back to defaults.
 

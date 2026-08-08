@@ -3,7 +3,7 @@ title: Remote Access Overview
 description: Options for accessing your GivEnergy system from outside your home network.
 ---
 
-By default, GivLocal only works when your phone is on the same network as your inverter. There are two ways to extend this to remote access.
+By default, INVLocal only works when your phone is on the same network as your inverter. There are two ways to extend this to remote access.
 
 ## Options
 

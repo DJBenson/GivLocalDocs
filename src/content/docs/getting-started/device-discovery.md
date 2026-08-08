@@ -1,9 +1,9 @@
 ---
 title: Device Discovery
-description: How GivLocal finds your GivEnergy devices on the network.
+description: How INVLocal finds your GivEnergy devices on the network.
 ---
 
-GivLocal scans your local network for GivEnergy hardware automatically when you open the Devices screen. If your device list is empty on first launch, the scan starts automatically.
+INVLocal scans your local network for GivEnergy hardware automatically when you open the Devices screen. If your device list is empty on first launch, the scan starts automatically.
 
 ## What the scanner finds
 
@@ -15,7 +15,7 @@ GivLocal scans your local network for GivEnergy hardware automatically when you 
 
 ## Automatic scan
 
-Tap the scan icon in the top right of the discovery screen. GivLocal scans every address on your current subnet (e.g. `192.168.1.1–254`) for GivEnergy devices. A progress bar shows how far through the scan you are.
+Tap the scan icon in the top right of the discovery screen. INVLocal scans every address on your current subnet (e.g. `192.168.1.1–254`) for GivEnergy devices. A progress bar shows how far through the scan you are.
 
 On a typical home network the scan completes in under a minute. When your inverter is found it appears in the list immediately - you don't need to wait for the scan to finish before connecting.
 
@@ -32,12 +32,12 @@ If you already know your inverter's IP address, tap **Manual Connection**, enter
 Each entry shows the product name, IP address, firmware version, serial number, and when the device was last seen.
 
 - **Rename** - long-press a device and tap **Edit** to give it a custom name or update its IP. You can also set a remote address here (e.g. `myinverter.example.com:18899`) for port forwarding setups
-- **Favourite** - long-press and choose **Set as Favourite**, or swipe right. The starred device connects automatically on launch. Requires **GivLocal Pro**
+- **Favourite** - long-press and choose **Set as Favourite**, or swipe right. The starred device connects automatically on launch. Requires **INVLocal Pro**
 - **Delete** - swipe left and tap **Delete**, or use the long-press menu
 
 ## Connection errors
 
-If a connection fails, GivLocal shows a brief explanation:
+If a connection fails, INVLocal shows a brief explanation:
 
 | Message | Likely cause |
 |---------|-------------|

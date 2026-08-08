@@ -8,7 +8,7 @@ import { Aside, Steps } from '@astrojs/starlight/components';
 import diagnostics from '../../../assets/screenshots/app-settings/diagnostics.png';
 import benchmark from '../../../assets/screenshots/app-settings/connection-benchmark.png';
 
-Open **Settings → Diagnostics** for tools to diagnose connection problems and tune how GivLocal communicates with your hardware.
+Open **Settings → Diagnostics** for tools to diagnose connection problems and tune how INVLocal communicates with your hardware.
 
 <a href={diagnostics.src} target="_blank" rel="noopener">
   <Image src={diagnostics} alt="Settings Diagnostics section showing Inverter Method and Connection Benchmark" />
@@ -16,7 +16,7 @@ Open **Settings → Diagnostics** for tools to diagnose connection problems and 
 
 ## Support Bundle
 
-Captures a register dump from each connected inverter (plus a combined plant dump if you have more than one), together with the debug log, and zips them into a single file ready to share with support. This is the fastest way to get GivLocal-side and inverter-side diagnostic data to support in one step, rather than exporting the debug log on its own.
+Captures a register dump from each connected inverter (plus a combined plant dump if you have more than one), together with the debug log, and zips them into a single file ready to share with support. This is the fastest way to get INVLocal-side and inverter-side diagnostic data to support in one step, rather than exporting the debug log on its own.
 
 ## Connection Benchmark
 
@@ -25,7 +25,7 @@ Tests each available connection method against your inverter and recommends the 
 <Steps>
 1. Open **Settings → Diagnostics → Connection Benchmark**
 2. Tap **Run Benchmark**
-3. GivLocal will test each method in turn
+3. INVLocal will test each method in turn
 4. The recommended method is highlighted - tap **Apply** to use it
 </Steps>
 
@@ -37,15 +37,15 @@ Previous benchmark results are shown so you can compare across sessions.
 
 ## Inverter Method
 
-Selects the connection strategy GivLocal uses to communicate with your inverter. Method 3 is the default and works for most devices. If you experience connection issues, run the Connection Benchmark to find the best method for your setup.
+Selects the connection strategy INVLocal uses to communicate with your inverter. Method 3 is the default and works for most devices. If you experience connection issues, run the Connection Benchmark to find the best method for your setup.
 
 ## Permissive Device Detection (NOTE: This setting is removed in version 1.0.5 and later)
 
-When enabled, the Devices screen showed hardware found during scanning even if its model code wasn't recognised by GivLocal. This was useful for newer or less common GivEnergy hardware that wasn't yet explicitly known to the app.
+When enabled, the Devices screen showed hardware found during scanning even if its model code wasn't recognised by INVLocal. This was useful for newer or less common GivEnergy hardware that wasn't yet explicitly known to the app.
 
 ## Verbose Frame Logging
 
-When enabled, GivLocal captures the raw bytes sent and received in each communication with the inverter. This is primarily useful for bug reports or diagnosing unusual behaviour.
+When enabled, INVLocal captures the raw bytes sent and received in each communication with the inverter. This is primarily useful for bug reports or diagnosing unusual behaviour.
 
 <Aside type="caution">
   Verbose Frame Logging generates large amounts of data quickly. Disable it once you have captured the information you need.
@@ -53,7 +53,7 @@ When enabled, GivLocal captures the raw bytes sent and received in each communic
 
 ## Debug Log
 
-GivLocal maintains an internal debug log that can be exported for troubleshooting. Use **Export** next to **Debug Log** to share it, or **Clear** next to **Clear Log** to reset it.
+INVLocal maintains an internal debug log that can be exported for troubleshooting. Use **Export** next to **Debug Log** to share it, or **Clear** next to **Clear Log** to reset it.
 
 <Aside type="tip">
   Looking for **Confirm Writes** or **Confirm Commissioning Writes**? Those moved to [Settings → General](/app-settings/general/). Looking for **Reset App Defaults**? That moved to [Settings → App Data](/app-settings/app-data/).

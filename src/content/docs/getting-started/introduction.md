@@ -1,9 +1,9 @@
 ---
 title: Introduction
-description: What GivLocal is and how it works.
+description: What INVLocal is and how it works.
 ---
 
-GivLocal is a mobile app for iOS and Android that lets you monitor and control your GivEnergy solar and battery system **directly over your home network**, without any cloud service or internet connection.
+INVLocal is a mobile app for iOS and Android that lets you monitor and control your GivEnergy solar and battery system **directly over your home network**, without any cloud service or internet connection.
 
 Right off the bat I'm going to be clear, the app is free to download and runs in read only mode by default. This is intended for people who simply want to check in on their system but not necessarily control it and also as a test for people who want control to check if it works with their setup.
 
@@ -13,7 +13,7 @@ For more details, refer to the [Pro & Installer](/pro/) section. A copy of the [
 
 ## How it works
 
-GivLocal communicates directly with your GivEnergy hardware over your home network. GivEnergy devices expose a Modbus-based interface on port 8899 (inverters and gateways) or port 502 (EV Charger), which GivLocal uses to read live data and write settings. Your phone talks directly to the hardware over Wi-Fi - no intermediary, no cloud.
+INVLocal communicates directly with your GivEnergy hardware over your home network. GivEnergy devices expose a Modbus-based interface on port 8899 (inverters and gateways) or port 502 (EV Charger), which INVLocal uses to read live data and write settings. Your phone talks directly to the hardware over Wi-Fi - no intermediary, no cloud.
 
 ## What you can do
 

@@ -1,6 +1,6 @@
 ---
 title: EV Charger
-description: Monitoring and controlling your GivEnergy EV Charger from GivLocal.
+description: Monitoring and controlling your GivEnergy EV Charger from INVLocal.
 ---
 
 import { Image } from 'astro:assets';
@@ -12,10 +12,10 @@ import advancedControls from '../../../assets/screenshots/ev-charger/advanced-co
 import status from '../../../assets/screenshots/ev-charger/status.png';
 
 <Aside>
-  EV Charger controls require **GivLocal Pro**.
+  EV Charger controls require **INVLocal Pro**.
 </Aside>
 
-GivLocal supports the GivEnergy EV Charger via two connection methods. Once connected, the charger appears on the Dashboard alongside your inverter and batteries.
+INVLocal supports the GivEnergy EV Charger via two connection methods. Once connected, the charger appears on the Dashboard alongside your inverter and batteries.
 
 <a href={dashboardOrb.src} target="_blank" rel="noopener">
   <Image src={dashboardOrb} alt="Dashboard power flow diagram showing an EV Charger orb with the charger's status and last four digits of its serial number" />
@@ -23,7 +23,7 @@ GivLocal supports the GivEnergy EV Charger via two connection methods. Once conn
 
 ## Connection methods
 
-**Modbus TCP (direct)** - GivLocal connects directly to the charger on port 502 over your local network. The charger must be on the same network and reachable by IP.
+**Modbus TCP (direct)** - INVLocal connects directly to the charger on port 502 over your local network. The charger must be on the same network and reachable by IP.
 
 For Modbus to work, the charger must meet all of the following requirements:
 
@@ -38,7 +38,7 @@ To enable local control in the GivEnergy portal:
 3. Go to Settings -> Other and toggle "Local Control" to "on"
 4. Wait for the device to restart and start the server, which can take around 10 minutes
 
-**OCPP (via Home Assistant)** - GivLocal connects to Home Assistant which relays commands to the charger via OCPP. On first connection you'll be prompted for a **long-lived access token** from your Home Assistant profile page. Paste it in, or scan a QR code if your HA instance supports it. The token is saved alongside the device - you only need to enter it once.
+**OCPP (via Home Assistant)** - INVLocal connects to Home Assistant which relays commands to the charger via OCPP. On first connection you'll be prompted for a **long-lived access token** from your Home Assistant profile page. Paste it in, or scan a QR code if your HA instance supports it. The token is saved alongside the device - you only need to enter it once.
 
 ## Status
 
