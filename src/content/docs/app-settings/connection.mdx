@@ -18,10 +18,10 @@ Open **Settings → Connection** to control how often INVLocal fetches data and 
 
 | Setting | Description | Default |
 |---------|-------------|---------|
-| Live Data Refresh | How often the Dashboard updates (power flow, battery SOC, quick stats) | 10 seconds |
-| Full Telemetry Refresh | How often the slower, more detailed register read runs | Longer interval |
+| Live Data Refresh | How often the Dashboard updates (power flow, battery SOC, quick stats) | 30 seconds |
+| Full Telemetry Refresh | How often the slower, more detailed register read runs | 5 minutes |
 
-Live data refresh can be set between **10 and 120 seconds** in steps of 10. A shorter interval gives more responsive readings but generates more network traffic to the inverter.
+Live data refresh can be set between **10 and 120 seconds** in steps of 10. A shorter interval gives more responsive readings but generates more network traffic to the inverter. Full telemetry refresh can be set to 1, 2, 5, 10, 15 or 30 minutes.
 
 ## Polling method
 
@@ -30,8 +30,8 @@ Controls how INVLocal reads data from the inverter:
 | Method | Description |
 |--------|-------------|
 | Default | Splits live data and detail reads into separate passes. Recommended for most setups. |
-| Full Telemetry | Reads all data in a single pass. Useful for diagnostics but slower. |
-| Battery Meter | Polling optimised for battery meter-style monitoring. |
+| Battery + meter | Adds extra battery and meter telemetry to each poll. |
+| Full telemetry | Reads the full data set on each refresh. Useful for diagnostics but slower. |
 
 If you are unsure which method to use, run the **Connection Benchmark** tool in **Settings → Diagnostics** - it tests each method against your hardware and recommends the best fit.
 

@@ -7,7 +7,7 @@ import { Image } from 'astro:assets';
 import hvBattery from '../../../assets/screenshots/battery-cell-details/hv-battery.png';
 import lvBattery from '../../../assets/screenshots/battery-cell-details/lv-battery.png';
 
-Tapping the battery card on the Dashboard opens a detailed cell-level view of your battery. The data shown depends on your battery type.
+Select **Cell details** on a supported battery card on the Dashboard to open a detailed cell-level view of your battery. The data shown depends on your battery type.
 
 <a href={lvBattery.src} target="_blank" rel="noopener">
   <Image src={lvBattery} alt="LV battery detail sheet showing per-cell voltages, voltage summary, and cell temperatures" />
@@ -20,17 +20,18 @@ Tapping the battery card on the Dashboard opens a detailed cell-level view of yo
 ## What's shown
 
 ### LV batteries
-- Per-cell voltage (mV)
+- Battery serial number, below the sheet title
+- Per-cell voltage (mV). Cells reading 0 V are shown rather than hidden, so faulty cells are easy to spot
 - Temperature readings
 - Calculated State of Health (when BMS capacity data is available)
+- BMS current and remaining capacity on newer models
 
 ### HV batteries (BMU)
-- Per-pack cell voltages
+- One page per module, with the module serial number
+- Per-module cell voltages
 - BMU and BCU pack data shown separately
-- Temperature per group or per cell depending on battery type
+- Each module's temperature sensors, using the sensor count reported by the battery's BCU (typically 12 per module)
 
 ## State of Health
 
-When your battery's BMS reports capacity data, INVLocal calculates and displays a State of Health percentage. This reflects how much usable capacity remains relative to the original design capacity.
-
-To enable State of Health display, turn on **Show Calculated State of Health** in [Settings → Battery Diagnostics](/app-settings/battery-diagnostics/) (NOTE: This setting is removed in version 1.0.5 and later).
+When your battery's BMS reports capacity data, INVLocal calculates and displays a State of Health percentage. This reflects how much usable capacity remains relative to the original design capacity. It is shown automatically; there is no setting to turn it on.

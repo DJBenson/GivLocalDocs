@@ -18,7 +18,7 @@ INVLocal can automatically switch between your local network connection and Tail
 You register your home Wi-Fi network(s) in INVLocal. When your phone is connected to a known network, INVLocal connects to your inverter directly using the local IP. When on any other network, it connects via Tailscale automatically - no manual switching needed.
 
 <Aside type="note">
-  Automatic switching requires the Location permission on iOS, which is used to detect the current Wi-Fi SSID. No location data is stored or transmitted.
+  Automatic switching needs permission to read the current Wi-Fi network name (SSID). On iOS this is presented as Location permission; newer Android versions use Nearby Wi-Fi Devices, and older ones Location. INVLocal only reads the network name. No location data is stored or transmitted, and the permission isn't requested unless you use Automatic Switching.
 </Aside>
 
 ## Setup

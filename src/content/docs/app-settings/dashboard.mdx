@@ -19,26 +19,23 @@ Open **Settings → Dashboard** to customise how the Dashboard looks and behaves
 
 ## Options
 
-### Power-based Speed (NOTE: This setting is removed in version 1.0.5 and later)
-When enabled, the animated dots on the power flow diagram move faster when more power is flowing. Gives a more intuitive sense of how much energy is being moved. Enabled by default.
-
 ### Hide Solar
 Hides the solar orb from the power flow card. Useful if you don't have solar panels and want a cleaner layout.
+
+### Enable External Generation
+Only appears for supported inverters. Reads solar generation from the combined external generation registers instead of the individual PV strings. Turn it on if solar generation shows as missing or zero while external generation is connected.
 
 ### Smart Switch Labels
 Controls what is shown on the device tabs at the top of the Dashboard:
 
 | Mode | Description |
 |------|-------------|
-| Name | Shows the device type (e.g. Gateway, All In One) |
-| Serial | Shows the device serial number |
-| Both | Shows name and serial number |
+| Serial | Always shows the device serial number |
+| Name | Shows the custom name, or the product name (e.g. Gateway, All In One) |
+| Alternate | Switches between the name and the serial number |
 
 ### Average Plant SOC
 When enabled, the SOC shown on the power flow diagram uses the average state of charge across all visible batteries, rather than the highest. Useful for multi-battery systems where you want an overall picture.
-
-### Enable GivTCP-style battery card (NOTE: This setting is removed in version 1.0.5 and later)
-Adds an optional battery summary card in the style used by GivTCP, showing capacity, charge/discharge totals, and timing estimates on a single card. Swipe the battery card area on the Dashboard to access it.
 
 ### Show implausible BCU values
 Shows battery cell unit (BCU) lifetime charge and discharge totals on the battery detail view even when they are implausibly different from each other. Off by default - INVLocal asks for confirmation the first time you enable it, since the figures may not be reliable.

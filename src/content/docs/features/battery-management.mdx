@@ -39,6 +39,10 @@ The battery card on the Dashboard shows:
 
 Swipe the card to see two more pages: today's charged/discharged totals, and lifetime charged/discharged totals.
 
+<Aside type="note">
+  For HV battery stacks, Design Capacity is the rated capacity and usable capacity is 85% of that, in line with GivEnergy's datasheets. For example, 5 modules give 17.0 kWh usable.
+</Aside>
+
 <a href={cardToday.src} target="_blank" rel="noopener">
   <Image src={cardToday} alt="Battery card showing today's power, charged, and discharged totals" />
 </a>
@@ -61,4 +65,4 @@ By default, Charge Now and Discharge Now use your configured power limits. You c
 
 ## Battery cell details
 
-Tap the battery card to open a detailed view showing per-cell voltages, temperatures, and (where available) a calculated State of Health. See [Battery Cell Details](/features/battery-cell-details/) for more.
+Select **Cell details** on a supported battery to open a detailed view showing per-cell voltages, temperatures, and (where available) a calculated State of Health. See [Battery Cell Details](/features/battery-cell-details/) for more.

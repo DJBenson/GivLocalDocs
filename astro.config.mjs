@@ -48,7 +48,6 @@ export default defineConfig({
                         { label: 'Quick Actions', slug: 'app-settings/quick-actions' },
                         { label: 'Diagnostics & Advanced', slug: 'app-settings/diagnostics' },
                         { label: 'App Data', slug: 'app-settings/app-data' },
-                        { label: 'Battery Diagnostics', slug: 'app-settings/battery-diagnostics' },
                     ],
                 },
                 {

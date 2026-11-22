@@ -24,6 +24,7 @@ The Inverter screen provides access to device information, diagnostics, and all 
 | Product | Device type (e.g. Gateway, All In One, Hybrid GEN3) |
 | Serial | Device serial number |
 | Firmware | Installed firmware version |
+| Operating Hours | Total hours the inverter has run. Tap to switch between hours and years, months and days |
 | Status | Current inverter status (e.g. On Grid, Off Grid) |
 | Last Updated | Timestamp of the most recent data read |
 
@@ -50,6 +51,7 @@ Useful for verifying that changes were applied, or for diagnosing unexpected beh
 Displays raw register values from the inverter in real time, grouped into categories:
 
 - **PV** - solar input voltages and currents
+- **Battery** - battery voltage, current, power, temperature and state of charge
 - **Grid** - grid voltage, frequency, and power
 - **EPS** - emergency power supply readings
 - **Temperature** - inverter and battery temperature sensors
@@ -64,8 +66,17 @@ Displays raw register values from the inverter in real time, grouped into catego
 |---------|-------------|
 | Eco Mode | When enabled, the inverter automatically manages charge and discharge based on schedule and conditions. For most users this should stay on. |
 | Battery Reserve | Minimum SOC the inverter will discharge to under normal operation (4–100%). Increase this to keep charge in reserve for a power cut. |
+| Battery Cut Off | The lowest SOC the battery will discharge to, including during timed discharges (4–100%). |
 | Pause Start / End | Time window during which the battery is held |
 | Pause Mode | Not Paused, Pause Charge, Pause Discharge, or Pause Charge & Discharge |
+| DC Charge Limit | Maximum battery charge rate in watts, at all times. Setting to 0 disables battery charging entirely. |
+| DC Discharge Limit | Maximum battery discharge rate in watts. |
+
+The maximum values available on the DC limit sliders reflect your inverter's hardware specifications and battery configuration.
+
+<Aside type="tip">
+  If **Use Max Power for Quick Charge/Discharge** is enabled in App Settings, the DC limits are temporarily overridden when you tap Charge Now or Discharge Now.
+</Aside>
 
 <a href={batteryControl.src} target="_blank" rel="noopener">
   <Image src={batteryControl} alt="Battery Control section showing Eco Mode, Pause Start/End, Pause Mode, and Battery Reserve" />
@@ -76,18 +87,14 @@ Displays raw register values from the inverter in real time, grouped into catego
 | Setting | Description |
 |---------|-------------|
 | Active Power Rate | Overall inverter output as a percentage of its rated capacity (%). Reduce to cap output for export limiting or grid compliance. |
-| Charge Power Limit | Maximum battery charge rate in watts. Setting to 0 disables battery charging entirely. |
-| Discharge Power Limit | Maximum battery discharge rate in watts. |
+| AC Charge Limit | Shown on inverters with separate AC limits. Caps the AC circuit as a percentage, but only while a charge schedule (including a quick action) is running. Minimum 1%. |
+| AC Discharge Limit | As above, for discharge schedules. Minimum 1%. |
 
-The maximum values available on these sliders reflect your inverter's hardware specifications and battery configuration.
+The AC limits have no effect outside a schedule. The inverter doesn't accept 0%, and 1% doesn't fully stop the battery, so to hold it raise Battery Reserve or Battery Cut Off instead. For battery-specific throttling use the DC limits in [Battery Control](#battery-control).
 
 <a href={powerLimits.src} target="_blank" rel="noopener">
   <Image src={powerLimits} alt="Power Limits section showing Active Power Rate, AC Charge Limit, and AC Discharge Limit" />
 </a>
-
-<Aside type="tip">
-  If **Use Max Power for Quick Charge/Discharge** is enabled in App Settings, these limits are temporarily overridden when you tap Charge Now or Discharge Now.
-</Aside>
 
 ## EMS Controls
 
@@ -131,12 +138,12 @@ Displays your phone's current time alongside the inverter's internal clock. Tap 
   Only change RTC mode if you understand its implications.
 </Aside>
 
-## Grid Compliance
+## EPS
 
 | Setting | Description |
 |---------|-------------|
-| EPS Mode | Enables Emergency Power Supply (off-grid backup) mode. Only appears on supported inverters. |
-| Zero Second EPS Changeover | Enables near-instantaneous switchover to battery during an outage rather than the standard brief interruption |
+| Enable EPS | Enables Emergency Power Supply (off-grid backup) mode. Only appears on supported inverters. |
+| 0 Second EPS Changeover | Enables near-instantaneous switchover to battery during an outage rather than the standard brief interruption |
 
 <Aside type="caution">
   EPS settings affect how your system behaves during a power cut. Do not change these without understanding the impact on your installation.
@@ -152,6 +159,7 @@ Values written on restore:
 |---------|-------------|
 | Eco Mode | Enabled |
 | Charge schedule enabled | Off |
+| Charge schedule enable (slot register) | Off |
 | Discharge schedule enabled | Off |
 | Battery Reserve | 4% |
 | Active Power Rate | 100% |
@@ -193,6 +201,7 @@ This section requires the [Installer tier](/pro/) and covers settings typically 
 
 | Setting | Description |
 |---------|-------------|
+| Serial Number | Updates the inverter serial number on supported devices. Check it carefully before applying |
 | Grid Code | Grid compliance standard for your country/region (0–29) |
 | Meter Type | CT clamps or energy meter (EM418/EM115) |
 | Battery Type | Lead Acid or Lithium-ion |
@@ -221,3 +230,7 @@ Tools for troubleshooting. None of these change inverter settings.
 **Plant Dump** - like Register Dump, but covers all inverters in a multi-inverter plant.
 
 **Register Sweep** - scans all registers and lists only those with non-zero values. A quicker way to find active or changed registers without wading through the full dump.
+
+## Meters
+
+A read-only tool that queries meter slave addresses 1 to 8. It shows available product information, phase voltages and currents, active power, frequency, and import/export energy. Use it to check meter wiring and addressing without changing any meter settings.

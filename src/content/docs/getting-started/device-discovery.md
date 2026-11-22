@@ -9,7 +9,7 @@ INVLocal scans your local network for GivEnergy hardware automatically when you 
 
 | Device type | Port |
 |-------------|------|
-| GivEnergy Hybrid and AC-coupled inverters | 8899 |
+| GivEnergy energy systems: Gateway, All in One, Hybrid, AC-Coupled, EMS and Three Phase | 8899 |
 | GivEnergy EV Charger (Modbus) | 502 |
 | GivEnergy EV Charger (OCPP via Home Assistant) | 8123 |
 
@@ -17,7 +17,13 @@ INVLocal scans your local network for GivEnergy hardware automatically when you 
 
 Tap the scan icon in the top right of the discovery screen. INVLocal scans every address on your current subnet (e.g. `192.168.1.1–254`) for GivEnergy devices. A progress bar shows how far through the scan you are.
 
+While a scan is running, tap the stop icon in the top right to stop it immediately.
+
 On a typical home network the scan completes in under a minute. When your inverter is found it appears in the list immediately - you don't need to wait for the scan to finish before connecting.
+
+## Finding a device that has moved
+
+If a saved inverter can no longer be reached at its known address, for example because your router gave it a new IP address, INVLocal scans in the background to find it again. The connection failure screen also offers a **Scan Network** button for the same purpose. Scanning needs a direct local connection, so it isn't available over Tailscale.
 
 ## Scanning a different subnet
 
@@ -55,4 +61,5 @@ If a device isn't found automatically:
 - Check it's powered on and connected to the network
 - Make sure your phone and inverter are on the same network segment
 - Try **Scan Different Subnet** if you have a mesh or VLAN setup
+- If your phone can't reach the inverter's subnet (for example because of guest or IoT network isolation), the scan will find nothing. Connect to the same network as the inverter
 - Try **Manual Connection** using the inverter's IP address

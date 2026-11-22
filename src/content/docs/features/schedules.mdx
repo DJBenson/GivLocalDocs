@@ -56,6 +56,18 @@ Each discharge slot has a start time, end time, and a lower SOC floor. The inver
 
 **Example use case:** discharge during peak tariff hours to reduce import costs.
 
+<Aside type="note">
+  On AC-Coupled inverters and Gen 1 and Gen 2 hybrids, the inverter doesn't accept a lower SOC limit for each discharge slot, so the option isn't shown. Use **Battery Reserve** (Inverter → Battery Control) instead. It sets one minimum state of charge that applies to every discharge.
+</Aside>
+
+## Merged slots
+
+Slots that touch or overlap are merged into one. For example, a slot from 09:00–10:00 and another from 10:00–10:30 become a single slot from 09:00–10:30.
+
+## Planner view
+
+On inverters with 10 slots, a **Slots / Planner** switch at the top of the tab lets you view and paint your schedule on a graphical day planner instead of the list. The planner is still being finished, so please report anything that looks wrong.
+
 ## Export slots *(EMS only)*
 
 EMS devices have a third section for **Export Slots**, controlling when surplus power is pushed to the grid. These follow the same structure as charge and discharge slots.

@@ -12,7 +12,17 @@ The Fault Log in the Inverter screen shows active and historical faults reported
 
 ## Viewing faults
 
-Open **Inverter → Fault Log** to see a list of faults. Each entry shows the fault code and description. Active faults are shown at the top.
+Open **Inverter → Fault Log** to see a list of faults detected during polling. Active faults are shown at the top. Each entry shows:
+
+- **Fault name** - a readable description decoded from the inverter's fault codes
+- **Detected** - the date and time INVLocal first noticed the fault
+- **Cleared** - the date and time the fault was no longer present, or an **Active** badge if it is still set
+
+<Aside type="note">
+  Timestamps show when INVLocal detected the fault, not when it actually occurred. The inverter doesn't expose fault event times over Modbus, so if the app wasn't polling when the fault happened, the detected time is the first poll after it was already set.
+</Aside>
+
+If a fault clears and later happens again, a new entry is created so the history is preserved.
 
 <a href={faultLog.src} target="_blank" rel="noopener">
   <Image src={faultLog} alt="Fault Log section showing two active faults and two cleared faults" />

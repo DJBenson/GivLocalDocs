@@ -16,7 +16,7 @@ Open **Settings → Diagnostics** for tools to diagnose connection problems and 
 
 ## Support Bundle
 
-Captures a register dump from each connected inverter (plus a combined plant dump if you have more than one), together with the debug log, and zips them into a single file ready to share with support. This is the fastest way to get INVLocal-side and inverter-side diagnostic data to support in one step, rather than exporting the debug log on its own.
+Creates a single zip file ready to share with support. It contains a register dump for each discovered inverter and the debug log, plus, when records exist, `write.log` (every setting written to each inverter) and `faults.log` (every fault the app has recorded for each inverter). Records are grouped by inverter serial number and are not limited by date, and a file is left out if there is nothing to record. This is the fastest way to get INVLocal-side and inverter-side diagnostic data to support in one step. Like the Debug Log, the bundle only leaves your device when you choose to share it.
 
 ## Connection Benchmark
 
@@ -38,10 +38,6 @@ Previous benchmark results are shown so you can compare across sessions.
 ## Inverter Method
 
 Selects the connection strategy INVLocal uses to communicate with your inverter. Method 3 is the default and works for most devices. If you experience connection issues, run the Connection Benchmark to find the best method for your setup.
-
-## Permissive Device Detection (NOTE: This setting is removed in version 1.0.5 and later)
-
-When enabled, the Devices screen showed hardware found during scanning even if its model code wasn't recognised by INVLocal. This was useful for newer or less common GivEnergy hardware that wasn't yet explicitly known to the app.
 
 ## Verbose Frame Logging
 

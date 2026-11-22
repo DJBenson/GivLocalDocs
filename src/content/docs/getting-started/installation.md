@@ -17,5 +17,5 @@ INVLocal is available now on iPhone and iPad.
 
 ## Requirements
 
-- Android 8.0 or later, or iOS 16 or later
+- Android 7.0 or later, or iOS 16 or later. Tailscale remote access needs Android 12 or later
 - Connected to the same Wi-Fi network as your GivEnergy inverter or gateway (for local access)
